@@ -1,0 +1,152 @@
+interface :
+==========
+ no need of writing public 
+ no need to write static for variables.
+1. default methods in interface can be accessible only in package, they cant be accessed outside the package.
+2. we can extend only one abstract class, but we can implement any number of interfaces.
+3. cannot create constructors in interfaces
+4. Unlike classes static methods are not inovolved in the inheritance,so only we can call static methods only with the interface it belongs to.(feature given in java 8)
+
+Abstract classes :
+================= 
+  helps only with in the package or project.
+1. When we need both defined and declared and that too in local scope we go for abstract classes.
+2. methods will have local scope that is protected. or you can make them public.
+3. can create construtors, but cannot be instantiated. even though it is called when subclass object is instantiated.
+
+
+Note :
+Using Super class reference which is holding subclass object, we cannot call the local methods of subclass.
+
+
+Interface:
+*********
+1. by default variables are public static final.
+2. by default methods are public abstarct.
+
+
+Access Modifiers:
+================
+
+1. Public : anywhere
+2. private : with in current class.
+3. default: with in current package.
+4. protected: with in current package anywhere and outside package only in the child class and that with child class reference and its sub class references.
+
+Overloading : 
+============
+	compiler decides which method to call known as method resolution. This takes place based on reference type so, this is also called compie time polymorphism or static polymorphism or early binding.
+	** autoatic promotion of argunments is available in overloaded methods in java
+
+	Rules:
+	------
+	1. Method name must be same, with different arguments
+
+
+Overriding : 
+===========
+	Compiler checks if the reference varaible has the method it is reffering to, if not it give CE.
+	     At run time JVM executes the method based on runtime object.so overriding is also known as Runtime polymorphism or dynamic polymorphism or Late binding
+	
+	Rules:
+	*****
+	1. Method signature must be same.
+	2. It accepts Covarient return types : it means child class object's return type can be same as parent class objects return type or it can be its child class object.
+	3. cannot override method with final access modifier.
+	4.cannot decrease the scope of the method by assigning weaker access modifier.
+		Note: this is why we keep public for implementing a method form interface.
+
+	5.If child class method throws any checked exception, then compulsory parent class method should throw same checked  exception or its parent. 
+	6.If child class method throws any unchecked exception, then there are no restrictions.
+
+	Note: Unchecked means all run time expection and its child classes such as AE or null pointer and Error and its child classes such as StackOverflow error.....
+
+	6. It is not possible to override static method as non-static or non-static as static.The only possible situation is to override static method is only with static but this is not overriding, It is known as method hiding. 
+	Note : In method hiding method resolution takes place by compiler based on reference type.
+
+*******************************************************************************
+* variable resolution always takes place by compiler based on reference type. *
+*******************************************************************************
+Modifiers allowed for constructor :
+==================================
+	public, private, protected, default.
+
+Prototype of Default constructor:
+==================================
+1. no-arg constrcutor.
+2. same class modifier if it is only public or default.
+3. only one line in the body : super();
+	
+** the first line of constructor should be this() or super(). if not compiler will generate super() in the first line of constructor.
+
+4. If parent class constructor throws any checked exception, compusory child class constrcutor should throw same checked exeption or its parent. 
+	*you cannot handle this by using try catch beacause the first statement in the constructor should be super().
+
+
+Type Casting : 
+*************
+
+A b = (C)d;
+
+there are 3 rules we need to remember
+
+Rule-1(Compiler) : 
+--------------------
+The type of 'd' and 'C' must have some relationship
+(either paarent to child or child to parent or same type )
+If not CE: incompatible types.
+
+Rule-2(Compiler) :
+---------------------
+C must be same as A or child type of A.
+If not CE: incompatible types.
+
+Rule-3(JVM) :
+---------------------
+Runtime object of 'd' must be either same as C or derived type of 'C'.
+If not Runtime Exception CCE(class cast Exception)
+
+
+Exception Handling:
+===================
+   Exception : which disturbs the normal flow of the program and leads to abnormal termination.
+   Handling : to acheive Graceful or normal termination of program and to define an alternative way.
+
+Runtime stack mechanism:
+-----------------------
+	For every thread jvm creates a stack and all methods calls realted to thread will be stored in that stack.once all methods are executed stack frames are removed step by step and then Jvm destroy's the stack and thread will be terminated.
+	* Every entry in stack is known as stack frame or activation record   
+
+Default Exception Handling:
+--------------------------
+	If an exception raised in any method,by default that is responsible to create exception object.Inside Exception object it has Name,Description and loaction(StackTrace).
+	Summary: If an exception raised in the method Jvm checks for any handling code inside method,If available it handles the exception. If there is no handling code Jvm removes this method's stack frame from stack and checks for any handling code in caller method. same repeats here, finally if main method doesn't handle this exception then all methods stack frames are removed from stack and stack is removed.Now jvm is the caller method to main() so jvm handles the exception to default exception handler. This terminates the program abnormally and prints the details from exception object to the console.
+
+
+
+
+
+
+
+
+
+
+
+doubts: byte ki b short ki s ani undada?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
