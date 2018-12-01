@@ -1,0 +1,13 @@
+Difference between arraylist and linkedlist: 
+------------------------------------------------
+•	Since Array is an index based data-structure searching or getting element from Array with index is pretty fast. 
+•	Array provides O(1) performance of get(index) method but remove is costly in ArrayList as you need to rearrange all elements. 
+•	On the Other hand LinkedList doesn't provide Random or index based access and you need to iterate over linked list to retrieve any element which is of order O(n).
+•	Insertions are easy and fast in LinkedList as compared to ArrayList because there is no risk of resizing array and copying content to new array if array gets full. 
+•	ArrayList also needs to update its index if you insert something anywhere except at the end of array.
+•	Removal is like insertions better in LinkedList than ArrayList.
+
+Disadvantage ::
+-----------------
+	At each node in an LinkedList not only the element but also the 
+addresses will be stored which kills the memory.

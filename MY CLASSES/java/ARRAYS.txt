@@ -1,0 +1,132 @@
+ARRAY:
+-----------
+An array represents  a group of elements of same data type.
+->Handling group of elements becomes easy with the help of arrays.
+->There are 2 types of arrays:
+1.Single dimensional arrays(1D)
+2.Multi dimensional arrays(2D)
+
+
+1.  Single dimensional array(1D):
+-----------------------------------------
+A 1D array represents a single row or single col of elements.
+Eg:
+---
+
+
+Creating a 1D array:
+------------------------
+There are 2 ways:
+
+(a):We can declare a 1D array and also initialise it with the elements.
+
+int marks[]={55,56,57,58,59};
+
+(b):We can allot memory for a 1D array and later store the elements into the array.
+
+int marks[]=new int[5];
+
+**Note:
+--------
+arrayname.length gives the size of the array.
+
+
+
+//total marks and percentage
+
+import java.io.*;
+class Arr
+{
+public static void main(String args[]) throws IOException
+{
+//to read data from Keyboard
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("How many subjects?");
+int n=Integer.parseInt(br.readLine());
+//create an array with size n
+int marks[]=new int[n];
+//store elements into marks[]
+for(int i=0;i<n;i++)
+{
+System.out.println("Enter Marks:");
+marks[i]=Integer.parseInt(br.readLine());
+}
+//find total marks
+int tot=0;
+for(int i=0;i<n;i++)
+{
+System.out.println(marks[i]);
+tot=tot+marks[i];
+}
+System.out.println("Total Marks="+tot);
+//percentage
+float percent=(float)tot/n;
+System.out.println("Percentage="+percent);
+}
+}
+
+2.  Two Dimensional Array(2D):
+-----------------------------------------
+A 2D array contains several rows and cols of data.
+ Eg:
+----
+
+Creating a 2D array:
+---------------------------
+There are 2 ways:
+
+(a).We can declare a 2D array and also initialise it directly with elements.
+
+int marks[][]={{1,2,3,4,5}{6,7,8,9,10}{11,12,13,14,15}};
+
+(b).We can allot memory for a 2D array using new operator and later store the elements.
+
+int marks[][]=new int[3][5];
+
+//Read from a 2D array and display in matrix form
+
+class Arr1
+{
+public static void main(String args[])
+{
+//take a 2D array
+float 
+x[][]={{1.1f,2.1f,3.1f,4.1f},{2.0f,2.2f,2.3f,-2.44f},{0.1f,0.2f,0.3f,0.4f}};
+//Display in matrix format
+System.out.println("\n In matrix form:");
+for(int i=0;i<3;i++)
+{
+for(int j=0;j<3;j++)
+{
+System.out.println(x[i][j]+"\t");
+}
+System.out.println();
+}
+}
+}
+
+
+IIQ:
+What are cmmd line args?
+
+
+******
+class Arr2
+{
+public static void main(String args[])
+{
+int n=args.length;
+System.out.println("No of args="+n);
+for(int i=0;i<n;i++)
+{
+System.out.println(args[i]);
+}
+}
+}
+
+HOME WORK:
+---------------------
+
+10.To find sum of 2 matrices.
+11.To find transpose of a matrix
+**12.Take a 2D array and display all its elements in matrix form using only one loop

@@ -1,0 +1,39 @@
+FINAL KEYWORD:
+==============
+
+@@ Methods which are declared as 'final' are called as final mehtods.
+
+@@ Final methods cannot be overriden, because they are not available to the sub classes. Therefore, only method overloading is possible with final methods.
+
+There are two uses of declaring a method as final given here::
+
+@@ When a method is declared as final, the performance will be better. A final method can be directly called inside any other sub class methods.
+
+class A
+{
+
+	final void method1()
+	{
+		System.out.println("Hai dear");
+	}
+}
+class B
+{
+	void method2()
+	{
+		A.method1();
+	}
+}
+
+@@ When a programmer does not want others to override his method, he should declare his method as final.
+
+@@ Any final variable value cannot be ovverrided in the same class 
+functions or in sub class functions, but any final variable of the 
+super class can be ovverrided in the sub classes.
+
+Final class:
+===========
+
+@@ A final class is a class which is declared as final. Final keyword before a class prevents inheritance.This means sub classes cannot be created to a final class.
+
+ 

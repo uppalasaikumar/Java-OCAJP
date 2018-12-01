@@ -1,0 +1,42 @@
+Constructors:
+=========
+
+-- constructor is a predefined object of the class which is used to create dynamic memory for the instance members of the class.
+
+-- Each class in java will hold a default constructor in it and is used in the creation of dynamic memory or object
+
+--default constructor is not visible to the user in the class. If we want to make it displayed then we can
+mention dummy definition of the default constructor in the class.
+-- When user defines a constructor with some parameters then the default constructor which will be already available in the class will be deactivated. And it cannot be used to create an object for the class instance members.
+
+-- If we want to make use of default constructor to create an object even if user defined constructor is there, we need to mention the dummy definition of the default constructor
+
+Ex:
+---
+class A
+{
+	A() // this is default constructor of the class A
+	{}
+}
+-- constructors will take its name as class name itself, followed by paranthesis. It will not have any return type. It cannot be directly called in any method or class.
+
+user defined constructor Example:
+-------------------------
+
+class A
+{
+	A(int a,int b) // user defined constructor with two parameters
+	{
+		definition;
+	}
+	A(int a) // user defined constructor with one parameter
+	{
+		definition;
+	}
+} // here in the above example we can observe polymorphic behaviour exhibitted by constructors
+
+--When we are calling a constructor in another constructor of same class then it should be the first 
+statement in it. And the constructor within another constructor should be called using 'this' operator
+-- No two constructors should be called within one constructor.
+-- 
+-- Constructors are even benifitial in alloting the values to instance variables of the class during the creation of the object. Earlier in the case of user defined methods the values to the instance variables could be passed by calling the methods after creating the object to the respective class.

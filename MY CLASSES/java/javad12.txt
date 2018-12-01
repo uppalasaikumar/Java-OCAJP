@@ -1,0 +1,194 @@
+METHODS:
+---------------
+A method represents a group of stmts to perform a task.
+->A method has 2 parts:
+1.  Method prototype or method header:
+-------------------------------------------------
+This part contains method name, method parameters and method returntype.
+Method parameters are vars to receive data from outside into the method.
+    returntype methodname(para1, para2,.........)
+For eg:
+-----------
+double sum(double x,double y)
+{
+----------
+-----------
+-----------
+}
+
+
+2.  Method Body:
+---------------------
+Method body contains a group of stmts written in left and right curly braces
+->Method body contains logic to solve the task.
+
+Eg:
+return x;
+return 1;
+Note:
+-------
+A method can written only one value or only one entity.
+
+//Understanding methods
+
+class Sample
+{
+//instance vars
+private double x,y;
+//parameterized constructor
+Sample(double a,double b)
+{
+x=a;
+y=b;
+}
+//method
+void sum()
+{
+double z=x+y;
+System.out.println("Sum="+z);
+}
+}
+class Demo1
+{
+public static void main(String args[])
+{
+//Sample s=new Sample();//Invalid
+Sample s=new Sample(10,15.5);
+s.sum();
+}
+}
+
+
+A method that acts upon instance vars of a class is called instance method.
+->Instance method is called using objname.methodname().
+
+
+class Sample
+{
+//instance vars
+private double x,y;
+//parameterized constructor
+Sample(double a,double b)
+{
+x=a;
+y=b;
+}
+//method
+double sum()
+{
+double z=x+y;
+return z;
+}
+}
+class Demo1
+{
+public static void main(String args[])
+{
+Sample s=new Sample(2,3);
+double res=s.sum();
+System.out.println("Result="+res);
+}
+}
+
+
+STATIC METHOD:
+-------------------------
+A method doesn't act upon instance vars is called static method.
+->A static method should be declared as static.
+->Static methods are called using classname.methodname
+
+
+class Sample
+{
+static double sum(double x,double y)
+{
+double z=x+y;
+return z;
+}
+}
+class Demo1
+{
+public static void main(String args[])
+{
+Sample s=new Sample();
+//double res=s.sum(10,15.4);
+double res=Sample.sum(10,15.4);
+System.out.println("Result="+res);
+}
+}
+
+->JVM first executes static methods and later it creates objects.
+
+Note:
+-------
+JVM executes in this following order.
+1.  Static Blocks
+2.  Static Methods
+3.  Instance Methods
+
+class Sample
+{
+static int i=100;
+static double sum(double x,double y)
+{
+System.out.println(i);
+double z=x+y;
+return z;
+}
+}
+class Demo1
+{
+public static void main(String args[])
+{
+Sample s=new Sample();
+double res=s.sum(10,15.4);
+//double res=Sample.sum(10,15.4);
+System.out.println("Result="+res);
+}
+}
+
+
+Static methods can directly access or read static vars.
+->A static variable should be declared as static.
+
+MIIQ:
+------
+What is the difference btw instance var and static var?
+REP:
+-------
+Instance variable is a var whose seperate copies are available to the objects.
+->If the Instance var in an obj is modified, it will not effect other objects.
+	
+A static var is a var whose single copy in memory is shared by all the objects.
+->If the static var is modified , it will effect all the objects.
+
+
+->Instance vars are created on heap.
+->static vars are stored on method area.
+
+
+Note:
+------
+A static block represents a group of stmts declared as static.
+
+static
+{
+-------
+-------
+-------
+}
+
+
+//static block or static method
+
+class Test
+{
+public static void main(String args[])
+{
+System.out.println("Static method");
+}
+static
+{
+System.out.println("Static block");
+}
+}                         

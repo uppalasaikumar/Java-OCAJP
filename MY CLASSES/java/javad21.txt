@@ -1,0 +1,62 @@
+class One
+{
+int x;
+}
+class Two extends One
+{
+int x;
+}
+
+How memory is occupied by the class two object?
+1. 4B
+2. >8B
+3. 8B
+4. <8B
+
+
+
+
+>8B--------Object is the superclass for all classes including for our own classes also.
+
+
+
+TYPES OF INHERITANCE:
+------------------------------------
+1. Single Inheritance
+2. Multiple Inheritance
+
+//Multiple inheritance using Interfaces
+
+interface Father
+{
+float HT=6.2f;
+void height();
+}
+interface Mother
+{
+float HT=5.2f;
+void height();
+}
+class Child implements Father,Mother
+{
+public void height()
+{
+System.out.println("Childs heigth="+(Father.Ht+Mother.Ht)/2);
+}
+}
+class Multi
+{
+public static void main(String args[])
+{
+Child ch=new Child();
+ch.height();
+}
+}
+
+
+
+HomeWork:
+----------------
+Create an interface 'shape' with pi value as 3.14159 and a method volume(float a, float b).Implement this interface individually in sphere and cylinder classes to find their volumes.
+Hint: vol of sphere=4*pi*r*r*r/3;
+          vol of cylinder=pi*r*r*h.

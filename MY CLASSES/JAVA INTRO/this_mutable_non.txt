@@ -1,0 +1,56 @@
+this keyword-> is a reference to the current object or which the method is invoked.
+Ex: a1.setInt(10);
+Class x
+{
+public static void main(String ar[])
+{
+p1=New xx();
+p1.setInt(20);
+}
+}
+class xx
+{
+int i=30; //Instance variable
+void setInt(int i)
+{
+i=i; //[(i=this.i)||(this.i=i)]
+System.out.print(i);
+}
+if i=i-->Local variable value is printed.
+this.i=i->Local variable value is printed.
+i=this.i->Instance variable value is printed.
+this.i --> used to identify the Instance variables
+
+Rule: If Local variable and Instance variable with same name then use 'this' keyword to
+identify the instance variable explicitly.
+this keyword is used in
+
+1. Methods,
+2. Constructors, and
+
+3. To pass the reference to the same object from particular memory area.
+When 'setInt' method is executed, i=i refers to the local variable. Since the name of the
+local variable is same as the Instance variable. In order to refer the Instance variable in
+this method, we need to explicitly.
+
+4. Write this.i . some of the programmers always refers to the instance variable by
+preceding this before the variable name.
+
+Setters: is a method which sets a property.
+Getters: is a method which gets a property.
+
+Ex: setInt(int x) {-----}; //mutator
+
+getInt(int x) {-----}; //Non-mutator
+
+Mutator:- is a method which modify the object.
+
+Non-Mutator:- The method which doesn't modify the object.
+
+In general all the 'getters' are non-mutators. But in almost all the cases, all the 'setters' are
+mutators.
+
+Mutable-class--> If you have single mutator in your class, then it is known as 'mutable class'
+
+Immutable-class--> If there are no mutators in a class then it is known as "Immutable
+class" (Which does not allow to modify an object after the object is created).

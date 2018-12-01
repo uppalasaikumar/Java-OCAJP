@@ -1,0 +1,113 @@
+STREAM:
+-------------
+                   It represents flow of data.
+
+There are two types of streams.
+1.Input Streams: 
+----------------------
+They read or access data.
+
+2.Output Streams:
+--------------------------
+They send or write data to some other place.
+
+->All streams are represented as classes in java.io. package.
+
+
+ACCEPTING INPUT FROM KEYBOARD:
+------------------------------------------------------
+Step 1: Connect your keyboard to InputStreamReader.
+  
+  InputStreamReader obj=new InputStreamReader(System.in);
+
+
+Step 2:  Connect InputStreamReader to BufferedReader
+
+BufferedReader br=new BufferedReader(obj);
+
+
+Step 3:Read data coming from BufferedReader using read() or readLine() methods.
+
+		OR
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in))
+
+read():
+-------
+
+//Read a Single character from Keyboard
+
+import java.io.*;
+class Input
+{
+public static void main(String args[]) throws IOException
+{
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("Enter a char:");
+char ch=(char)br.read();
+System.out.println("U entered:"+ch);
+}
+}
+
+
+
+ACCEPTING A STRING FROM KEYBOARD:
+-----------------------------------------------------------
+String ch=br.readLine();
+
+
+
+ACCEPTING INT VALUE FROM KEYBOARD:
+--------------------------------------------------------------
+Syn: classname.methodname();
+
+String str=br.readLine();
+int n=Integer.parseInt(str);
+		(or)
+int n=Integer.parseInt(br.readLine());
+
+
+ACCEPTING FLOAT VALUE FROM KEYBOARD:
+-----------------------------------------------------------------
+float n=Float.parseFloat(br.readLine());
+
+ACCEPTING DOUBLE VALUE FROM KEYBOARD:
+---------------------------------------------------------------------
+double n=Double.parseDouble(br.readLine());
+
+
+
+
+//Accepting Employee details
+
+import java.io.*;
+class EmpData
+{
+public static void main(String args[]) throws IOException
+{
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("Enter id:");
+int id=Integer.parseInt(br.readLine());
+System.out.println("Enter gen(M/F):");
+char gen=(char)br.read();
+br.skip(2);
+System.out.print("Enter name:");
+String name=br.readLine();
+
+System.out.println("Id="+id);
+System.out.println("gen="+gen);
+System.out.println("Name="+name);
+}
+}
+
+
+
+HOME WORK:
+--------------------
+6.Accept 2 nos from Keyboard and find the result of their addition,sub,mul and division.
+
+7.Print even nos between m and n
+
+8.Print fibonacci no series.
+
+9.Print prime number series.
+

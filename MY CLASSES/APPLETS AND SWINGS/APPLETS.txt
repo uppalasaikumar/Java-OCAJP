@@ -1,0 +1,231 @@
+AWT:(ABSTRACT WINDOW TOOLKIT)
+============================
+	In order to display data with GUI,an applet must use java classes specifically designed for displaying information in a GUI environment.The java
+GUI classes are contained in the java.awt package
+
+Java's AWT package provides the following:
+--------------------------------------
+	A full set of UI widgets and components,incuding windows,menus,buttons,check boxes,text boxes,text areas etc.,
+	Support for UI containers ,which can contain other embeded containers or
+UI widgets.
+	An event system for managing system and user events among parts of AWT.
+
+The basic idea behind the AWT package is to have a graphic oriented java program.
+
+first we look at Heirarchy of awt api
+-----------------------------------------
+	
+Applets:
+----------
+
+	Applet is a GUI based, multithreaded, networked, event based program that is sent by a webserver on request of a webclient on internet and displayed by in a Java enabled web browser.
+	Java applets are part of HTML pages and provide dynamic programs embedded in the static web page. They are  downloaded and instantiated from the webserver . but are restricted from accessing the client resources. Applet runs in a tight security called 'Sandbox model' and is prevented from 
+a)	Reading and writing files on clients system.
+b)	Accessing resources of client system. 
+c)	It cannot access the IPAddress of the client but can access the IPAddress of the webserver.
+d)	Applet cannot communicate with different webservers except that one it is instantiated from it.
+	Any class that has to create applet has to subclass of Applet class available in java.applet package. The applet superclass provides skeleton methods that can be overriden by applet for its execution. The methods are:
+1)	init()
+2)	start().
+3)	stop().
+4)	destroy().
+	To create applet with its GUI components, the program has to import the following packages.
+
+Applet LifeCycle:
+==============
+1. public void init():
+=================
+		 This method executes only once when applet downloads and excute in the browser. We provide all required resources for applet execution in init().
+
+2. public void start():
+===================
+		 It executes many times as and when the applet is displayed. Hence it is an ideal place to start the resources of the Applet.
+
+3. public void paint(Graphics obj):
+==========================
+		 This method is provided by container class. It executes the most. paint() paints the graphical information on the applet. Every time applet is raised, uncovered or maximized, restored paint executes.
+4. public void stop():
+==================
+		 When ever the applet goes out of the view stop() is executed and can be an ideal place to stop the animation threads or other resources that are not required when applet not in view. Applet may go out of view because applet is minimized or user moves to next page.
+5. public void destroy():
+=================== 
+		It is last method and the final method to execute. It can be used to free the resources that are allocated to an applet.
+
+AWTComponents:
+
+	Abstract window toolkit, which provides all components like TextBoxes, buttons etc plus Frames and Dialogs. The components are
+
+1.Label: This class creates Label control that displays non-editable information like titles, sub headings, captions etc. you cannot directly edit the text on label.
+
+Constructors:
+
+Label(): Creates blank label.
+
+Label(String caption): Creates Label with text in it.
+
+Label(String caption,int alignment-const): Creates Label with caption in specified alignment. Alignment constants can be:
+		Label.LEFT
+		Label.RIGHT
+		Label.CENTER
+
+Methods:
+
+setText(String caption): Assigns new caption to the lable.
+
+String getText(): Returns the current caption of the Label.
+
+2.TextField: Creates a textbox that allows you to input, edit or display data. TextField contains and return data in text format i.e. in String format.
+
+Constructors:
+
+TextField(): Creates blank textbox.
+
+TextField(String defaultvalue): Creates textbox with default text in it.
+
+TextField(int size): Creates a textbox a the specified size.
+
+TextField(String defaulttext,int size)
+
+Methods:
+
+getText(), setText()
+
+setEchoChar(char): This method sets masking character for the textbox to be used as password field.
+3.Button: Creates push buttons (or) command buttons that can be used to click and execute a process.
+
+Constructors:
+
+Button(): Creates a blank button.
+Button(String caption): Creates a button with a caption on it.
+
+Methods:
+
+setLabel(): To set caption on button.
+getLabel(): to return caption on button.
+
+4.List: This class is used to create list boxes, that allows us to display set of predefined values. We can select one value from the list of values.
+
+Constructors:
+
+List(): Creates a blank List box.
+List(int no.of rows): List box with no.of rows to display.
+List(int no.of rows, boolean multiselect): If the multiselect option is true then we can select two or more values at a time from the List box.
+
+Methods:
+
+String getSelectedItem(): Returns the currently selected item.
+int getSelectedIndex(): Returns the index of the item selectd. First item is 0.
+int getListCount(): Returns the total no.of items in the List box.
+select(String item): Selects the specified item in the list box.
+select(int itemIndex): Selects the item with given index.
+addItem(String item): This method is used to add the given item to the List box.
+String[] getSelectedItems(): This method returns the selected items into a String array in multi select List box.
+int[] getSelectedIndexes(): This method returns the selected item indexes into an integer array in multi select List box.
+
+5.Choice: Creates a Choice control (i.e. a pull down combo box). It is similar to List box except that it displays the items pulldown and multi select is not possible.
+
+Constructors:
+
+Choice(): Creates blank Choice control.
+
+Methods:
+
+String getSelectedItem();
+int getSelectedIndex();
+int getListCount();
+select(String item);
+select(String itemIndex);
+addItem(String item);
+
+6.Checkbox: 
+
+Used to create Checkbox control to represent a set of options from which one (or) more can be selected. Selected Checkbox displays a tick mark.
+
+Constructors:
+
+Checkbox(): Creates a blank Checkbox.
+Checkbox(String caption,Boolean state): If the state is true the Checkbox is default selected.
+
+7.RadioButton: 
+
+	RadioButtons are created by using an overloaded constructor of Checkbox by passing CheckboxGroup object into Checkbox constructor.
+
+Constructor:
+Checkbox(String caption,CheckboxGroup obj,boolean state);
+
+Methods:
+boolean getState(): Returns true if Checkbox/ RadioButton is selected.
+setState(boolean state): Changes the state of the Checkbox/Radiobutton.
+8.ScrollBar: Creates Scrollbar that can be used to perform some process when scrolled.
+
+Constructor:
+Scrollbar(int orientation, int position, int pageincrement, int minimum, int maximum);
+
+Orientation can be:
+
+	Scrollbar.VERTICAL
+	Scrollbar.HORIZONTAL
+
+Methods:
+int getValue(): Returns current value of Scrollbar.
+
+setValue(int): Assigns the given value to Scrollbar.
+setUnitIncrement(int value): Assigns the given value to Scrollbar as unit increment value.
+
+int getUnitIncrement(): Returns the unit increment value of the Scrollbar.
+
+setBlockIncrement(int value): Assigns the given value to Scrollbar as block increment.
+
+int getBlockIncrement(): Returns the block increment value of the Scrollbar.
+
+9.TextArea: Creates a multiline Textbox.
+
+Constructor:
+TextArea(int no.of rows, int no.of cols);
+
+Methods:
+setText()
+getText()
+append(String text): Adds new String at the end.
+replace(String text, int startpos, int endpos): Replaces the existing text with the given text.
+
+Event Model & Listeners:
+
+	All Listeners are interfaces. Applet behaves like a processor. It will be busy performing task assigned to it and will be temporally interrupted by an incoming call of event.
+
+Event Model:
+
+	The event model prior to java1.1 was premitive type and is currently depricated. In the older event model all the components of the applet were able to generate events. This created lots of wastage of processing time because every time the event is generated the applet is interrupted , listen to the incoming event. If the event was generated by a component that is not interested in performing any process the event was delighted upwards to the super class, the event will propagated in the class hierarchy till it was processed or migrated out of the hierarchy due to this inherit defect a new model was introduced, called ‘Delegation Event Model ‘. In this model the events are handled by interfaces called Listeners. A component is interested in generating event must register itself with appropriate Listener by using the method.
+
+	CompObject.addXXXListener(this (or) classobject);
+
+	An unregistered component will not generate any event. When the event occurs the appropriate method is called  i.e. process is delegated to required method and the method will handle the event.
+
+	The method have an event source class that encapsulates the objects that is causing the event. Using the getSource() of event source class you can retrieve the component responsible for event. When a component is no longer interested in generating events its Listener can be removed by using  compObejct.removeXXXListener(this (or) classobj).
+Steps to handle components:
+
+1)	Create handlers before init().
+2)	Instantiate them in init().
+3)	If required add appropriate Listener using compObj.addXXXListener().
+4)	To display the components add them to applet using the method add(compObject).
+5)	Implement the methods of Listener.
+
+Listeners:
+
+1.ActionListener: It is used to preocess click events like button click, menu click etc. Its method is
+
+public void actionPerformed(ActionEvent var);
+2.MouseListener: It is used to deal with mouse operations like mouse enter, exit etc.
+
+Methods:
+
+public void mouseEntered(MouseEvent var)
+public void mouseExited(MouseEvent var)
+public void mousePressed(MouseEvent var)
+public void mouseReleased(MouseEvent var)
+public void mouseClicked(MouseEvent var)
+
+3.MouseMotionListener: It is also used to deal with mouse operations but is restricted to mouse movement and dragging.
+
+
+

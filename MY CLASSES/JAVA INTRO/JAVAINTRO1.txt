@@ -1,0 +1,95 @@
+Introduction:
+=============
+
+Software:
+---------
+	A computer's component which is not touchable and is 
+used to full fill few computer oriented requirements.
+
+Hardware:
+--------
+	A computer's component which can be touchable and 
+used for the activation of the software components of the 
+computer machine.
+
+Catogories of Software:
+------------------------
+	1) System Software
+	2) Application Software
+
+1) System Software is one which can interact with the hardware resources of the computer machine and can able 
+to manage the hardware resources when it is need by any 
+application software.
+
+System software can understand Machine level language and 
+as well high level language.
+
+Example:  Operating System (Windows XP,Linux etc.,)
+--------
+
+2) Application Software:
+-----------------------
+	A software which cannot directly communicate with the Hardware resources but is used for fullfilling certain 
+comuputer requirements of the user.
+
+	An Application software can only understand user 
+provided instructions.
+
+There are three types of Application Softwares They are
+
+1) Window/Desktop Applications
+2) Web/Internet Applications
+3) Mobile Applications
+
+
+1) A window Application is one which can be installed on a 
+single machine and used in only that machine.It is not a sharable resource. These applications cannot be accessible 
+over the network.
+
+Ex: MS - OFFICE, ADOBE READER, VLC MEDIAPLAYER
+
+2) Web based applications are those which are deployed on a 
+server machine and can be accessible over the network to 
+n - number of clients globally.
+	These are also called as Distributed applications.
+
+Ex: GMAIL, FACEBOOK , TWITTER etc.,
+
+JAVA Programming language is much used in the development of 
+Desktop or web applications but least used in the development of mobile applications
+
+Mobile Applications:
+-------------------
+	An application which is used on only mobile devices 
+is called as mobile Application.
+
+Ex: Whats App, Messaging services etc.,
+
+package:
+----------
+	A package is a software which consists of pre-requisite set of tools 
+only used to perform certain operations, but cannot be used to develop another
+application.
+
+Ex: Ms - Office , vlc media player
+
+Programming Language:
+--------------------
+	A desktop application used for the development of another application.
+It allows any programmer to type few valid instructions which are understandable by the programming language software for the development of 
+other softwares.
+
+Ex: Basic , Ada , smalltalk , cobol , c , c++ , java etc.,
+
+Program:
+-----------
+	Set of valid instructions understandable by any programming language is 
+called as a Program
+
+Programming languages are catogorised into three
+------------------------------
+
+1) Sequential Programming language
+2) structural Programming language 
+3) Object Oriented programming language
+

@@ -1,0 +1,91 @@
+** It is an entity like class that defines only abstract methods. The methods are by default public. Unlike an abstract class interface cannot contain concrete methods and instance variables. 
+
+** A class that inherits interface must provide implementation to all the methods in interface.
+
+** java uses "implements" keyword to inherit interface.
+
+** Multiple inheritance is allowed through interfaces i.e., a class can implements any number of interfaces.
+
+** An interface can also implement another interface. When an interface extends another interface it provides a collection of methods.
+
+** Java supports multiple inheritance through interfaces because interfaces can have only abstract methods and their implementation can be provied in the inherited classes. 
+
+** any method or variable in an interface are default public.
+
+** Interface variables are by default public static final
+
+** Interaface method are by default public but not final
+
+** Default access specifier for any java class member is 'protected' so,when we are providing definition for any interface method in implemented class we need to issue 'public' keyword before it, then only the method can be treated as if it is inherited from an interface or JVM will be considering the method as a local method of implemented class.
+
+Example:
+---------
+interface A
+{
+	sum();
+	sub();
+}
+interface B
+{
+	
+	sum();
+	mul();
+}
+
+class impl123 implements A,B
+{
+	sum()
+	{
+		return (a+b);
+	}
+	mul()
+	{
+		return (a*b);
+	}
+	sub()
+	{
+		return (a-b);
+	}
+}
+** Multiple inheritance is only possible in between interface and 
+a java class but not between java classes or any two java interfaces.
+=====================================
+class A
+{
+	sum(int a,int b)
+	{
+		return (a+b);
+	}
+
+}
+class B 
+{
+	sum(int a,int b)
+	{
+		return (2+1);
+	}
+}
+
+class c extends A,B
+{
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

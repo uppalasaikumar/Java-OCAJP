@@ -1,0 +1,6 @@
+<APPLET CODE="SoundApplet.class" 
+        CODEBASE="example-1dot2/"
+        ARCHIVE="playing.jar"
+        WIDTH="500" HEIGHT="200">
+
+</APPLET>

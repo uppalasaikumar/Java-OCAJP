@@ -1,0 +1,22 @@
+JTabbedPane:
+
+Is a container to add multiple components, on every tab. The user can choose a component from a tab.
+
+1. To create a JTabbedPane:
+	JTabbedPane jtp = new JTabbedPane();
+
+2. TO add tabs:
+	jtp.addTab("title",obj);
+     Here the obj can be an object of panel.
+
+3. To create a panel containing some components:
+	class MyPanel extends JPanel
+	Now, pass 'MyPanel' class's obj to addTab().
+
+4. To remove a tab (and its components) from the tabbed pane:
+	jtp.removeTabAt(int index);
+
+5. To remove all the tabs and thier corresponding components:
+	jtp.removeAll();
+
+Note: In JPanel the default layout manager is FlowLayoutManager.

@@ -1,0 +1,148 @@
+		EXCEPTION HANDLING
+		===================
+
+There are three types of errors:
+1.  Compile-time errors
+2.  Run-time  errors
+3. Logical errors
+
+
+1.  Compile-time errors:
+-----------------------------
+->These are the errors in the syntax and the grammar of the lang.
+->These errors are detected by java compiler at the time of compilation.
+->We can eliminate these errors by checking the prgm that is called as Desk Checking.
+
+2.  Run-time errors:
+---------------------------
+->These errors occur due to the inefficiency of the computer system to execute a stmt.
+->These errors are detected by JVM at runtime.
+
+3.  Logical errors:
+---------------------
+->These are the errors in the logic of the prgm.
+->The programer is responsible for logical errors.
+->If the prgm is not matching with manually calculated result then we can suspect logical error.
+
+
+
+EXCEPTION:
+-------------------
+An Exception is runtime error.
+
+IIQ:  What are checked Exceptions?
+R:  The Exceptions detected by the java compiler at compilation time are called Checked Exceptions.
+Eg:  IOException
+
+	The Exceptions detected at runtime by the JVM are called Unchecked Exceptions.
+
+->All Exceptions are represented by classes in Java.
+
+
+IIQ:  Which is the superclass for all Exceptions?
+R:  Exception is the superclass for all Exceptions.
+
+
+IIQ: What is throwable?
+R:  Throwable is a class that represents all errors and exceptions in Java.
+This is the super class of Exception class and as well Error class
+
+
+//Exception Example
+
+class Ex
+{
+public static void main(String args[]) 
+{
+System.out.println("Open files");
+int n=args.length;
+System.out.println("The value in n = "+n);
+int a=45/n;
+System.out.println("The value in a = "+a);
+System.out.println("Close files");
+}
+}
+
+
+It is terminating the prgm abnormally.
+->Where there is an exception  in a prgm jvm displays exception mssg and terminates the prgm abnormally .Because of abnormal termination the files and data bases are not closed properly. Hence the user data will be lost.
+
+When any runtime execption is raised in the program, JVM will terminate the 
+program and will not execute the other lines of the program.
+
+So as to execute the other lines of code even after the exception and cose the 
+files or objects in case if they are open at the time of exception, then we 
+need to handle the exception.
+
+Steps to handle the Exception by the programmer ::
+------------------------------------------------
+
+->T1:
+-------
+The prgmer should write the code inside a try block.
+	try
+	{
+	---------
+	---------
+	}
+->If there is an exception in try block, JVM stores the exception mssg in a seperate block of memory called Exception stack and then jumps into catch block.
+
+->T2:
+-----------
+The prgmer should display the exception mssg and any other mssgs to the user in catch block.
+	catch(Exceptionclass obj)
+	{
+	-----------
+	-----------
+	}
+
+->T3:
+--------
+The prgmer should close all the files and data bases inside a finally block.
+
+	try
+	{
+	stmts;
+	}
+	catch(Exceptionclass obj)
+	{
+	stmts;
+	}
+	finally
+	{
+	stmts;
+	}
+
+What is the speciality of finally block?
+finally block is always executed whether there is an exception or not.
+
+Performing the above task is called Exception Handling.
+
+
+
+//Exception Handling Example
+
+class Ex
+{
+public static void main(String args[]) 
+{
+try
+{
+System.out.println("Open files");
+int n=args.length;
+System.out.println("n="+n);
+int a=45/n;
+System.out.println("a="+a);
+}
+catch(ArithmeticException ae)
+{
+System.out.println(ae);
+System.out.println("plz type vars while running the prgm");
+}
+finally
+{
+System.out.println("Close files");
+}
+}
+}
+

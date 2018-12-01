@@ -1,0 +1,15 @@
+Window Panes (Area in Window) :
+
+A window pane represents an area of a window. It is an object that can contain other components.
+
+The area excluding the title bar in a frame is called window pane.
+
+JFrame class methods:
+
+1. getContentPane() : returns an object of 					Container class.
+
+2. getLayeredPane() : retunrs an object of 					JLayeredPane class.
+
+3. getRootPane()    : returns an object of 			JRootPane class.
+
+4. getGlassPane()   : returns an object of 			Component class.

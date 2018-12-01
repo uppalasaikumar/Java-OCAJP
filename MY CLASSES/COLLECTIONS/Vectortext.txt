@@ -1,0 +1,33 @@
+VECTOR:
+
+	A Vector is a heterogeneous collection of objects and is a dynamic array. Vector is not restricted by an upper bound and when
+	the allowed size is full it automatically expands and reallocates memory for more elements.
+		
+		When an object is stored in a vector (or any allocation) it loses its exact type and is stored as a generic object. 
+	when the elements are retrieved,the programmer has to take care and type cast explicitly to the actual type of the object.
+
+
+Constructors:
+		Vector()
+		Vector(int size)
+		Vector(int size,reallocation size)
+		Vector(Collection)
+
+Methods:
+		size(): --> Returns the no.of elements that are containing.
+		
+		capacity(): ---> Returns the total size of the vector.
+
+		boolean isEmpty(): --> Returns true if the vector is empty.
+
+		addElement(obj): --->Adds an object to vector at the end.
+
+		insertElementAt(obj,int): --->Inserts the object at specified index.
+
+		boolean removeElement(obj): ---> Removes the element specified and returns true if the element is found and removed.
+		
+		elementAt(int), firstElement(), lastElement(): --> They returns object from specified position.
+		
+		Enumeration elements()---> Returns the elements of the vector in the form of Enumeration object.
+
+		boolean hasMoreElements()---> Returns true if there exist elements if Enumeration object. 

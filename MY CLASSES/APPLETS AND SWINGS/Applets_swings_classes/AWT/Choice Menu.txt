@@ -1,0 +1,16 @@
+Choice Menu:
+
+Choice menu is a popup list of items. Only one item can be selected.
+
+1. To create a choice menu:
+	Choice ch = new Choice();
+
+2. To add items to the Choice menu:
+	ch.add("text");
+
+3. To know the name of the item selected from the choice menu:
+	String str = ch.getSelectedItem();
+
+4. To know the index of the currently selected item:
+	int i = ch.getSelectedIndex();
+	This method returns -1 if nothing is selected.

@@ -1,0 +1,49 @@
+A listener is an interface that listens to an event from a component. Listeners are in java.awt.event.
+
+Component	 Listener	
+---------	                    --------	
+
+1. Button	                  ActionListener	
+
+2. Checkbox	ItemListener
+
+3. CheckboxGroup     ItemListener
+
+4. Label                               -------------
+
+5. TextField	ActionListener	or           FocusListener
+
+6. TextArea	ActionListener	or           FocusListener
+
+7. Choice	                   ActionListener	or            ItemListener
+
+8. List		ActionListener	or            ItemListener
+
+9. ScrollBar	AdjustmentListener    or         MouseMotionListenr
+
+
+
+Listener		Listener Methods
+--------		-------- -------
+1. ActionListener	actionPerformed(ActionEvent e)
+
+2. ItemListener	itemStateChanged(ItemEvent e)
+
+3. FocusListener	focusGained(FocusEvent e),
+			focusLost(FocusEvent e)
+
+4.AdjustmentListener	           adjustmentValueChanged(AdjustmentEvent e)
+
+5. MouseMotionListener	mouseDragged(MouseEvent e),
+			mouseMoved(MouseEvent e)
+
+
+Note1: The above Listener methods are all 'public void' methods.
+
+Note2: A Listener can be added to a component using addXXXListener method
+       Ex: addActionListener()
+
+Note3: A listener can be removed like - removeXXXListener method.
+
+Note4: A listener method takes an object of XXXEvent class.
+       Ex: actionPerformed(ActionEvent e)

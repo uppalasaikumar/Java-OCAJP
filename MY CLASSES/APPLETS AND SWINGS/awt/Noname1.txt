@@ -1,0 +1,21 @@
+List:-
+List()
+List(int size)
+List(int size,boolean b)
+
+public void add(xxx);
+List l=new List();
+
+l.add("c");
+l.add("c++);
+l.add("java");
+
+
+
+
+choice:-
+
+
+Choice c1=new Choice();
+c1.add("hyd");
+

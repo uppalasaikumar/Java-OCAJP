@@ -1,0 +1,36 @@
+Observations ::
+----------------
+
+## public static void main(String args[])
+---------------------
+	This is a predefined method provided by JVM, and 
+java interpreter will be calling only this method for executing a java class.
+
+## 'static' is a predefined java keyword used to provide 
+memory for member functions of any java class or any 
+java variable before the execution of the java program.
+static members are stored in a memory area called as 
+'Method Area' and as well .class files are also stored in 
+method area.
+
+## 'public' is a predefined java keyword used to provide access for any java function or variable outside the scope 
+of any folder in which java program is existing.
+
+## println() --> this is a static method available in a 
+predefined java class named as 'java.lang.System'
+
+## There is no need of importing the System class because 
+java developers has designed the java software in a way that the basic classes and package will be made available  by default.
+	one such java package is 'java.lang'
+
+## println() method is used to print any value in the format of a string 
+
+## In java.lang.System class there are three static keywords. They are 
+
+1) out --> this is a static keyword which helps in transfering physical data 
+from the program on to the console screen
+
+2) in --> this static keyword is used to take the input data from the console screen to the program
+
+3) err --> this static keyword of the System class is used to send the error 
+messages from the java program to the console screen

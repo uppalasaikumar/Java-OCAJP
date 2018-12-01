@@ -1,0 +1,138 @@
+PACKAGES:
+------------------
+A package is a sub directory to store classes and interfaces.
+
+ADVANTAGES:
+--------------------
+1. Pcks hide class and interfaces so that accidental deletion is not possible.
+2. Pcks isolate the classes and interfaces.
+3. Pcks provide reusability.
+4. The User can also create pcks and he can extend already available pcks.
+	2 types of pcks---1. Built in pcks.(A.J)
+		          2. User defined pcks.
+
+
+//Creating our own package: pack
+
+
+package pack;
+public class Addition
+{
+private double a,b;
+public Addition(double a,double b)
+{
+this.a=a;
+this.b=b;
+}
+public void sum()
+{
+System.out.println("Sum="+(a+b));
+}
+}
+
+//Using package pack
+
+class Use
+{
+public static void main(String args[])
+{
+Addition obj=new Addition(10,22.5);
+obj.sum();
+}
+}
+
+
+pack.Addition obj=new pack.Addition(10,22.5);
+
+
+
+//add another class to the package: pack
+
+package pack;
+public class Sub
+{
+public static double sub(double x,double y)
+{
+return x-y;
+}
+}
+
+
+double res=pack.Sub.sub(10,22.5);
+System.out.println("RESULT="+res);
+
+
+import pack.Addition;
+import pack.Substraction;
+
+
+->  A package contains not only class but also interfaces.
+
+//an interface in a package
+package pack1;
+public interface MyDate
+{
+void showDate();
+}
+
+
+
+//an implementation class for interface
+
+package pack1;
+import pack.MyDate;
+import java.util.Date;
+public class MyDateImpl implements MyDate
+{
+public void showDate()
+{
+Date d=new Date();
+System.out.println(d);
+}
+}
+
+//Using Interface
+import pack1.MyDateImpl;
+class Use
+{
+public static void main(String args[])
+{
+MyDateImpl obj=new MyDateImpl();
+obj.showDate();
+}
+}
+
+
+Use obj=new Use();
+obj.showDate();
+It should use extends MyDateImpl
+
+
+
+
+import pack.*;
+import java.io.*;
+
+
+
+//Creating a sub package in a package
+
+package niit.apet;
+public class Sample
+{
+public void show()
+{
+System.out.println("Hello students");
+}
+}
+
+//Using niit.apet package
+import niit.apet.Sample;
+class Use
+{
+public static void main(String args[])
+{
+Sample s=new Sample();
+s.show();
+}
+}

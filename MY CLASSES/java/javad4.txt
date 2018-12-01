@@ -1,0 +1,218 @@
+
+TERNARY OPERATOR (OR) CONDITIONAL OPERATOR(? :)
+-----------------------------------------------------------------------------------
+
+->This operator acts upon three variables so it is called ternary operator.
+->It represents a conditional stmt so it is called conditional operator.
+syn:
+----
+var=exp1?exp2:exp3;
+eg:
+----
+max=(a>b)?a:b;
+
+
+
+NEW OPERATOR:
+-----------------------
+->It is useful to create an object to the class.
+syn:
+class obj=new class();
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+		CONTROL STMTS
+	               -----------------------------
+
+Control stmts are the stmts which change the flow of execution.
+The following are the control stmts in Java.
+1.  if-else stmt
+2.  do-while stmt
+3.  while loop
+4.  for loop
+5.  for each loop
+6.  Switch
+7.  break stmt
+8.  continue stmt
+9.  return stmt
+
+1.if-else stmt:
+------------------
+this stmt is executes a task depending upon whether a condition is true or not.
+Syntax:
+if(cond)
+stmt1;
+[else stmts 2;]
+
+Eg:
+-----
+class Demo
+{
+public static void main(string args[])
+{
+int n;
+n=5;
+if(n==0)
+System.out.println("It is zero");
+else if(n>0)
+System.out.println("It is +ve");
+else if(n<0)
+System.out.println("It is -ve");
+}
+}
+
+
+for-each loop:
+------------------
+This loop repeatedly excecute a group of  stmts for each element of a collection
+collection:  A gp of elements or objects.
+array:  A gp of elements, character it stores in java.util package classes are called collections.
+
+Syn:
+------
+for(var:colln)
+{
+----------
+----------
+}
+
+Eg:
+-----
+class Demo
+{
+public static void main(String args[])
+{
+int arr[]={23,56,5,7,6};
+for(int x:arr)
+System.out.println(x);
+}
+}
+
+
+SWITCH STATEMENT:
+------------------------------
+This stmt is useful to execute a particular task from among several tasks, depending upon the value of variable.
+
+Syntax:
+-----------
+switch(var)
+{
+case value1:stmts 1;break;
+case value2:stmts 2;break;
+-------------------------------------
+--------------------------------------
+case valuen:stmts n;break;
+[default:default stmts;]
+}
+
+Eg:
+----
+class Demo
+{
+public static void main(String args[])
+{
+char color='g';
+switch(color)
+{
+case 'r':System.out.println("Red");break;
+case 'g':System.out.println("Green");break;
+case 'b':System.out.println("Blue");break;
+case 'w':System.out.println("White");break;
+default:
+System.out.println("No color")
+}
+}
+}
+
+
+BREAK:
+-------------
+It can be used in three different ways.
+1.break is used to come out of a loop.
+2.break is used to come out of switch block.
+3.break is used in Nested blocks to jump to or goto end of a block.
+
+3.Prgm:
+------------
+
+class Demo
+{
+public static void main(String args[])
+{
+boolean x=true;
+bl1:
+{
+bl2:
+{
+bl3:
+{
+System.out.println("Block3");
+if(x==true) break bl2;
+}
+System.out.println("Block2");
+}
+System.out.println("Block1");
+}
+System.out.println("Out of all");
+}
+}
+
+
+Continue:
+----------------
+This stmt is useful to continue the next repetition of a loop.When continue is executed subsequent in the loop are not executed.
+class Demo
+{
+public static void main(String args[])
+{
+for(int i=10;i>=1;i--)
+{
+System.out.println(i);
+}
+}
+}
+
+
+->if(i>5) continue;		->if(i<5)                                  continue;
+System.out.println(i);	                          System.out.println(i);
+
+
+
+RETURN:
+-------------
+It is used in 2 ways.
+1.return stmt is used to come out of a method back to the calling method.
+2.It can be used to return some value to the calling method.
+
+Note:
+-------
+Return stmt in main method terminates the entire application.
+
+class Demo
+{
+public static void main(String args[])
+{
+int n=1;
+System.out.println("Before return");
+if(n==1)return;
+System.out.println("After return");
+}
+}
+
+
+
+
+HOME WORK:
+-------------------
+1.Print odd no's upto 100.
+2.Test whether a no is even or odd.
+**3.Test whether a no is prime or not.
+4.Display a Multiplication table.
+5.Display a stars in this form:
+                   *
+	          *  *
+                *   *  *
+               *  *  *  *

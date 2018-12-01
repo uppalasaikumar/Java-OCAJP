@@ -1,0 +1,69 @@
+TYPE 3:
+----------
+We can initialize the instance variables using a constructor.
+
+Constructor:
+---------------
+It is similar to a method that is used to initialize the instance variables.
+->A constructor's name and the class name should be same.
+
+
+class Person
+{
+private String name;
+private int age;
+//constructor
+Person()
+{
+name="Venkat";
+age=33;
+}
+//parameterised constructor
+Person(String s,int i)  //instance vars
+{
+name=s;
+age=i;
+}
+//action methods
+void talk()
+{
+System.out.println("Hello Iam "+name);
+System.out.println("My age is "+age);
+}
+}
+
+->A constructor may or may not have parameters
+->A constructor without parameter is called default constructor.
+->A constructor doesn't return any value not even void.
+->A constructor is called only once at the time of creating an object.
+
+//Using the class
+
+class Demo
+{
+public static void main(String args[])
+{
+Person p1=new Person();
+p1.talk();
+Person p2=new Person("Raj",22);
+p2.talk();
+}
+}
+
+P.Constructor:
+------------------
+A constructor with parameters it can be one or more parameters.
+->To initialize each object to different data.
+D.Constructor:
+------------------
+To initialize each object to same data.
+
+Constructor OverLoading:
+--------------------------------
+Writing 2 or more constructors with the same name but with a difference in the parameters is called constructor o.l
+
+
+
+HOME WORK:
+----------------------
+Create a class with student details like id, name, add, marks and create 2 objs to it.[Using with and without constructor]

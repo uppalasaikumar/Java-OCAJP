@@ -1,0 +1,46 @@
+Method Overloading:
+====================
+	Methods are said to be overloaded when multiple methods of a class have the same name but each varies from other in type signature. The type signature is nothing but the arguments passed to the method and it can differ in
+1.	No.of arguments
+2.	Type of arguments
+3.	Sequence of arguments
+	
+	The return type of method does not participated in method overloading. Method overloading comes under the concept of polymorphism. It is a static polymorphism also called compile time polymorphism. Because, this polymorphism is known to the compiler at the time of compilation itself.
+===================================================
+
+//program that demonstrates method overloading
+class adder
+{
+void add(int a)
+{
+System.out.println("addtion is not possible with one number");
+}
+void add(int a,int b)
+{
+System.out.println(a+"+"+b+"="+(a+b));
+}
+void add(int a,int b,int c)
+{
+System.out.println(a+"+"+b+"+"+c+"="+(a+b+c));
+}
+void add(int a,String b)
+{
+System.out.println(a+"+"+b+"="+a+b);
+}
+void add(String a,String b)
+{
+System.out.println(a+b);
+}
+}
+class overloaddemo1
+{
+public static void main(String args[])
+{
+adder a1=new adder();
+a1.add(4);
+a1.add(3,4);
+a1.add(3,4,5);
+a1.add(3,"roses");
+a1.add("bill","gates");
+}
+}

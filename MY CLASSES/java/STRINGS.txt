@@ -1,0 +1,154 @@
+STRINGS:
+-----------
+->A String represents a group of characters.
+
+CREATING STRINGS:
+----------------------------
+1.  We can declare a string variable and directly stores the chars into the variable.
+	String s1="Hello";
+
+2.  We can create string class obj and store a group of chars into that object.
+	String s2=new String(); 
+now we can pass whatever string we want
+	String s2=new String("world"); 
+
+3.  We can convert a character array into a string by passing the array to the string object.
+	char arr[]={'a','b','c','d'};
+	String s3=new String(arr);
+	String s3=new String(arr,1,3);
+
+->Java soft people have introduce some methods in String i.e. java.lang.String
+
+
+java.lang.String:
+--------------------
+1.String concat(String str)
+--------------------------------
+concactinate the calling string with string.
+Note:
+-------
++ will also do the same.
+
+Eg:
+----
+String s1="Hydera";
+String s2="bad";
+s1.concat(s2);
+String x=s1.concat(s2);
+
+
+2.int length()
+----------------
+returns the length of a string.
+ 
+Eg:
+----
+s1.length();
+int n=s1.length();
+
+
+3.char charAt(int i)
+-----------------------  
+returns the character at the specified location(from 0).
+
+4.int compareTo(String str)
+-------------------------------------
+int compareToIgnoreCase(String str){case Insensitive}
+returns a negative value if the calling string come before str in dictionary order,a positive value if the string come after str,or o if the strings are equal.
+Eg:
+----
+int n=s1.compareTo(s2);
+if s1==s2, n=0
+if s1>s2, n=+ve
+if s1<s2, n=-ve
+
+5.boolean equals(String str)
+---------------------------------
+boolean equalsIgnoreCase(String str)
+returns true if the calling string equals str.
+
+6.boolean startsWith(String prefix)
+--------------------------------------------
+returns true if the calling string starts with prefix.
+
+7.boolean endsWith(String suffix)
+-----------------------------------------
+returns true if the invoking string ends with suffix.
+
+8.int indexOf(String str)
+--------------------------------
+returns the first occurence of string in the string.
+
+9.int lastIndexOf(String str)
+-----------------------------------
+returns the last occurence of string in the string
+
+10.String replace(char oldchar,char newchar)
+---------------------------------------------------------
+returns a new string that is obtained by replacing all characters old char in the string with new char.
+
+11.String subString(int beginIndex)
+----------------------------------------------
+returns a new string consisting of all chars from beginIndex until the end of the string.
+
+12.String subString(int beginIndex,int endIndex)
+-----------------------------------------------------------
+returns a new string consisting of all characters from beginIndex until endIndex(Exclusive).
+
+13.String toLowerCase()
+--------------------------------
+converts all characters into lower case.
+
+14.String toUpperCase()
+--------------------------------
+converts all characters into upper case.
+
+15.String trim():
+---------------------
+eliminates all leading and trailing spaces.
+
+
+//Understanding strings
+
+class Str
+{
+public static void main(String args[])
+{
+//create 3 strings 
+String s1="This is Java";
+String s2=new String("I like it");
+char ch[]={'N','I','I','T'};
+String s3=new String(ch);
+
+//display Strings
+System.out.println("s1="+s1);
+System.out.println("s2="+s2);
+System.out.println("s3="+s3);
+
+//find no.of chars in s1
+System.out.println("Length of s1="+s1.length());
+
+//join s1 string with s2
+System.out.println("s1 joined with s2="+s1.concat(s2));
+
+//join 3 strings using +
+System.out.println(s1+"at"+s3);
+
+//check the begining of s1
+boolean x=s1.startsWith("This");
+if(x==true)
+System.out.println("s1 starts with This");
+else
+System.out.println("s1 doesn't starts with This");
+
+//retrieve sub strings from s2,s3
+s2.substring(0,6);
+String p=s2.substring(0,6);
+String q=s3.substring(0);
+System.out.println(p+q);
+
+//convert case of the string
+System.out.println("Upper s1="+s1.toUpperCase());
+System.out.println("Lower s1="+s1.toLowerCase());
+}
+}

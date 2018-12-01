@@ -1,0 +1,28 @@
+		ACCESS SPECIFIERS
+		----------------------------
+
+An access specifier is a key word that specifies how to access the members of a class or the class itself.
+-> There are four Access Specifiers in Java:
+	1.  private
+	2.  public
+	3.  protected
+	4.  default
+
+
+	
+1.  Private members of a class are not available in other classes of the same pack or another package. So the scope of private specifiers in class scope.
+
+2.  public members of a class are accessible in other class of the same pack or another pack also.  So the scope of public specifier is global scope.
+
+3.  protected members are accessible to the classes of the same package but not to the classes of another package.
+
+4.  default members are available to the classes of the same package and not available to the class of another package.  The scope of default specifier is package scope.
+
+NOTE:
+-------
+protected members of a class are always available to the sub classes either in the same package or in another package.[if there is any relationship btw these classes ]. So there is no scope for protected.
+
+
+HOME WORK
+------------------
+Create a Figure class with 2 instance var x,y in a package called geopack.  Then import that package into Rectangle class, to find the area of Rectangle(Your Rectangle class extends Figure).  Similarly, derive Triangle class and Circle class and display their areas.

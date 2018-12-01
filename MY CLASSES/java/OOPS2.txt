@@ -1,0 +1,155 @@
+ENCAPSULATION:
+--------------------------
+Taking data and methods as a single unit is called encapsulation.
+Eg:
+---
+class        var 	        var
+                var name	        var name
+                methods	         methods
+               Emp	         Student
+
+It is a protective mechanism.  A class protects it own members.
+
+ADVANTAGE:
+------------------
+A programer can use same names for the members of 2 different classes(No overriding of data is occured).
+
+3.  DATA ABSTRACTION:
+----------------------------------
+Hiding unnecessary data or important data from the user is called Data Abstraction.
+Abstraction:
+-------------
+Hiding the important data.  We use certain keywords.  It provides different levels of abstraction.
+1. private  2.  public  3.protected
+     Abstraction is implemented through keywords called Access specifiers.
+
+4.INHERITANCE:
+-------------------------
+Producing new classes from existing classes is called Inheritance.
+	Reusability of code is the main advantage in the inheritance.
+
+5.POLYMORPHISM:
+--------------------------
+Poly-many, morphor-forms
+	The ability to exists in various forms is called polymorphism.  In programing, if a variable or object or method performs various tasks is called polymorphism.
+
+IIQ:  What is the difference btw object oriented programing langs and object based programing langs.
+Rep:  Object oriented programing langs follow all the features of oops.
+Eg:
+c++, Java, smalltalk, simula 67
+Object based programing langs follow all the features of oops except Inheritance.
+Eg:
+Javascript and VB script.
+
+
+//a class and objects
+
+class Person
+{
+String name;
+int age;
+void talk()
+{
+System.out.println("Hello Iam"+name);
+System.out.println("My age is"+age);
+}
+}
+class Demo
+{
+public static void main(String args[])
+{
+Person p1=new Person();
+p1.talk();
+Person p2=new Person();
+p2.talk();
+}
+}
+
+When the programs doesn't initialize the instance vars, java compiler internally add some additional code into the class where it initializes the instance variables with default value as shown below.
+
+	data type		   default value
+                --------------                    -------------------
+	int		   0
+
+	float		  0.0
+	
+	double		  0.0
+
+	char		  a space
+
+                 *String		  null
+
+	any class		  null
+
+                 *boolean		  false
+
+
+
+INITIALISING INSTANCE VARIABLE:
+--------------------------------------------------
+There are certain types
+
+Person p1=new Person();
+p1.talk();
+They are the reference vars.
+
+
+TYPE 1:
+---------
+We can initialize instance vars of a class in another class using reference variable.
+->Using Access specifier(private) it provides the security.
+
+ACCESS SPECIFIER:
+-----------------------------
+They are the keywords which specify how to access or read the member of a class or the class itself.  There are 4 access specifiers in Java.
+
+1.private:
+------------
+Private members of a class are not accessible any where outside the class.
+
+2.public:
+----------
+public members of a class are always available outside the class
+
+3.protected:
+---------------
+They are available outside the class.
+
+4.default:
+-------------
+When no access specifier is used, java compiler internally uses default specifier.
+->default members are available outside the class.
+Note:
+-------
+We cannot use private specifier before a class in Java.
+
+
+
+TYPE 2:
+---------
+We can initialize the instance vars directly at the time of their declaration in the class.
+
+
+class Person
+{
+final double PI=3.142;
+String name="Raj";
+int age=19;
+void talk()
+{
+System.out.println("Hello Iam"+name);
+System.out.println("My age is"+age);
+}
+}
+class Demo
+{
+public static void main(String args[])
+{
+Person p1=new Person();
+p1.talk();
+}
+}
+
+Note: Type 2 is used for initialization of constants.
+final double PI=3.142;
+Note: final keyword is used to declare constants in java.

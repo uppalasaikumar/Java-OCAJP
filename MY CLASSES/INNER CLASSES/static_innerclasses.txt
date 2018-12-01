@@ -1,0 +1,29 @@
+/*
+Static Inner Classes:
+-------------------
+If the inner class is static, then static inner class can be instantiated without an outer class instance, otherwise, the inner class object must be associated with an instance of the outer class.
+*/
+
+class Example
+{
+  public static void main(String args[])
+	{
+		Outer.display();
+		Outer.Inner.show();
+	}	
+}
+
+ class Outer
+	{
+	static void display()
+	{
+		System.out.println("outer class display method");
+	}
+	static class Inner
+	{
+		static void show()
+		{
+			System.out.println("inner class show method");
+		}
+	}
+}

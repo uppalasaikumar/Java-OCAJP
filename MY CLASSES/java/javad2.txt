@@ -1,0 +1,90 @@
+ NAMING CONVENTIONS [NAMING RULES] IN JAVA:
+-------------------------------------------------------------------------
+
+1.Package names in Java are written in all small letters.
+	Ex:java.awt
+	     java.io
+	     javax.swing
+
+2.Each word of class names and interface names start with a capital.
+	Ex:String
+	     DataInputStream
+	     ActionListener
+
+3.Method names start with a small letter, then each word start with a capital.
+  	Ex:println()
+	     readLine()
+	     getNumberInstance()
+
+4.Variable names also follow the above rule.
+  	Ex:age
+	      empName
+	      employee_Net_Sal
+
+5.Constants should be written using all capital letters
+	Ex:PI
+	     MAX_VALUE
+	     Font.BOLD[bold is a constant in Font class]
+
+6.All keywords should be written in all small letters.
+	Ex:public 
+	      void 
+	      import
+
+
+
+        IMPORTANT PACKAGES OF CORE JAVA
+                 ----------------------------------------------------------
+
+1.  java.lang:
+------------------
+This package got primary classes and interfaces essential java prgm.It consists of Wrapper classes, Strings, Threads etc.
+
+2.java.util:
+--------------
+This package contains useful classes and interfaces like stack, linkedlist, hashtable, Arrays, etc.
+
+3.java.io:
+-------------
+This package handles files and input-output related tasks.
+
+4.java.awt:
+---------------
+This package helps to develop GUI. It consist of an important sub package:java.awt.event.
+
+5.javax.swing:
+--------------------
+This package helps to develop GUI like java.awt
+
+6.java.net:[NETWORK]
+--------------
+Client-Server prgming can be done using this package.
+
+7.java.applet:
+-------------------
+Applets are prgms which come from a server into a client and get executed on the client machine.
+
+8.java.sql:[Structured query lang]
+--------------
+This package helps to connect to database like Oracle and utilize them in Java.
+
+
+		DATA TYPE
+	            -------------------------
+A Data Type represents the type of data stored in memory(variable).
+
+
+INTEGER DATA TYPES:
+----------------------------------
+D.T	    Memory size	        Min and Max 
+-----	----------------------	--------------------------------------------
+1.byte	     1 Byte		-128   to  +127
+2.short	     2 Bytes	                  -32768 to 32767
+3.int 	     4 Bytes	                 -214,74,83,648 to                                                         214,74,83,647
+4.long	   8 Bytes	-9223372036854775808 to                                           9223372036854775807           
+                                                       -9.2*10^-18 to                                                         9.2*10^17
+
+
+Ex:
+          byte rno=10;
+Literal is a value i.e. directly stored into the variable.

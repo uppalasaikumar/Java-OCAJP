@@ -1,0 +1,147 @@
+Wrapper Classes
+============
+
+	Wrapper class are the class of the primitive data types. 
+
+	If we want to create an object version of the primitive data type variables then we can go for wrapper classes.
+
+	Each and every primitive data types they have corresponding wrapper classes.
+
+	
+		int 		- Integer
+
+		float		- Float
+
+		double		- Double
+
+		char		- Character
+
+		short		- Short
+
+		byte		- Byte
+
+		boolean		- Boolean
+
+		long		- Long
+
+
+
+	- Wrapper classes are used to store in to the collection. As Collection does not support primitive datatype variables.
+
+	
+Boxing / autoboxing
+===========
+
+	boxing : Float floatobj1 = new Float(3.5);
+
+	Autoboxing : Integer ob2=90;
+
+	Boxing has introduced from jdk1.5 onwards. Where a primitive literal can be directly assigned to wrapper  class object.
+
+	Integer ob2=90;
+
+Unboxing / non autoboxing
+========
+
+	In a unboxing we can directly assign an object of wrapper class to the primitive data type variables.
+
+	Integer ob1=new Integer(56);
+
+	int a=ob1;	//Before jdk1.5 int a= ob1.intValue();
+
+
+String 
+=========
+
+public final class String extends Object 
+implements Serializable, Comparable<String>, CharSequence
+
+The String class represents character strings. 
+
+All string literals in Java programs, such as "abc", are implemented as instances of this class. 
+
+
+"harish"
+
+
+int x = 10;
+
+Integer y = x;
+
+System.out.println("Value is .." +y.intValue());
+
+
+
+
+
+
+
+Before jdk 1.5 
+------------------
+
+Integer i1 = new Integer(90);
+
+int x = i1.intValue();
+
+i1++;
+
+--------------------------------
+
+After jdk 1.5
+----------
+
+Integer i2 = 50;
+
+i2++;
+
+int x = i2;
+
+x++;
+
+i2 = x;
+
+
+Type Casting for primitives:
+
+short s =10;
+
+int i = s ;// Implicit narrow type casting
+
+short s1 = (short)i; // Explicit Narrow type casting 
+
+char c = A';
+
+short s2 = (short)c; // Explicit wide type casting
+
+
+Type Casting for Wrapper Classes:
+
+Long lng = new Long(100);
+
+Integer int1 = Integer.valueOf(lng.IntValue()) ; 
+
+Integer int2 = Integer.valueOf(lng.toString()) ;
+
+
+
+
+Note :
+1. for object to object conversions we use ValueOf methods.
+2. for Primitive to object conversions we use ValueOf methods.
+3. for objects to primitives we use parseXXX methods.
+
+For parseXXX methods input should be string values.
+
+int X = Integer.parseInt(int1.toString())
+
+
+Next Classes: 
+
+1.
+
+
+
+
+
+	
+	

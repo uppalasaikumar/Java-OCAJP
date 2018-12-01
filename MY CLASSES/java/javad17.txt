@@ -1,0 +1,99 @@
+		POLYMORPHISM
+	          ----------------------------------
+
+->The ability to exists in the several forms is called polymorphism.
+->If a variable or object or method performs various tasks then it is called polymorphism.
+->There are 2 types of polymorphism.
+1. Static polymorphism(compile time).
+2. Dynamic polymorphism(run time).
+
+DYNAMIC POLYMORPHISM:
+---------------------------------------
+This is the polymorphism exhibited at runtime.  In this JVM binds a method call with the actual method body during runtime.
+->so, it is also called dynamic binding or runtime polymorphism.
+
+//dynamic polymorphism
+
+class Sample
+{
+void add(int a,int b)
+{
+System.out.println("Sum of two="+(a+b));
+}
+void add(int a,int b,int c)
+{
+int d=a+b+c;
+System.out.println("Sum of three="+d);
+}
+}
+class Poly
+{
+public static void main(String args[])
+{
+Sample s=new Sample();
+s.add(10,22);
+s.add(10,22,55);
+}
+}
+
+
+M.O.L:
+--------
+Writing two or more methods with the same name but with the difference in the method signature is called M.O.L.
+
+-> In M.O.L JVM Identifies the methods differently from any one difference as shown below.
+1.There is a difference in the no.of parameters.
+	eg:  void add(int a,int b)
+	       void add(int a,int b,int c)
+2.Or, there is a difference in the datatypes of parameters
+	eg:  void add(int a,int b)
+	        void add(float a,float b)
+3.Or,there is a difference in the sequence of parameters.
+	eg:  int swap(int a,char b)
+	       int swap(char a,int b) 
+
+             Any one of the above differences will make method signatures to be different. So, Jvm can easily recognies the methods.
+*
+
+
+class One
+{
+void calculate(double x)
+{
+System.out.println("Square value="+(x*x));
+}
+}
+class Two extends One
+{
+void calculate(double x)
+{
+System.out.println("Square root="+Math.sqrt(x));
+}
+}
+class Poly
+{
+public static void main(String args[])
+{
+Two t=new Two();
+t.calculate(16);
+}
+}
+
+->Writing two or more methods with the same name and same signatures in super and sub classes is called Method Overriding.
+-> In M.O.R , Jvm executes a method depending upon the class for which the object is created.
+
+
+
+STATIC POLYMORPHISM:
+-----------------------------------
+->This is the polymorphism exhibited at complilation time.  Here the compiler binds a method call with actual method body during compilation time.
+->so, it is also called static binding or compile time polymorphism.
+
+	Performing M.O.L and M.O.R using static methods or private methods or final methods are examples for static polymorphism.
+
+		M.O.L		M.O.R
+		---------		---------
+
+static		Y		Y
+private		Y		N
+final		Y		N

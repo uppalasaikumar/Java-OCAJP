@@ -1,0 +1,23 @@
+
+Assignment:
+
+
+
+1. Create 2 text fields to enter 2 numbers into them, when the push button is clicked, display their sum in the third text feild.
+
+
+
+
+
+
+
+
+
+2.Take a student class with hno,name and marks in Physics, Maths and Chemstry. Create the screen which accepts hno and displays the rest of the details in text feilds.
+
+
+
+
+
+
+3. Create the calculator using a textfeild and push buttons. Also add the functionality to it.

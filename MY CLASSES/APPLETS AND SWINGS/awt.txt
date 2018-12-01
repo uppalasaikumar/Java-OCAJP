@@ -1,0 +1,234 @@
+
+container:-
+----------
+It is GUI Component,it can be used to accomidate(or) manage many
+more no.of GUI components .
+Ex:-
+
+Window,Frame,Panel,Applet
+
+ 
+
+
+
+
+
+
+
+
+
+Display the text data on Frames:-
+-----------------------------------
+
+
+
+To provide any graphic representation on the 
+frame like textual data,ovels,rectangles.......
+we should use paint method .
+
+    public void paint(Graphics g)
+
+
+
+
+
+
+
+-->
+To display an textual data on frame 
+
+first we should define
+
+font characteristics for this we will use a predefine 
+Font class constructor.
+     
+	Font f=new Font(String,int,int);
+        EX:
+
+      Font f=new Font("Arial",Font.BOLD,40);
+
+
+
+
+-> After defining font characterstics 
+  we have to apply 
+  font characterstics to graphics.
+  for this we will use the following method.
+
+    public void setFont(Font f)
+  
+
+    EX:-
+     g.setFont(f);
+
+
+  To display a line of text 
+we will use the following method
+
+ public void drawString(String data,int x,int y)
+
+
+
+
+
+
+
+
+Event Delegation Model(or) Event Handling:-
+---------------------     ----------------
+
+The Gui Components are not having 
+
+any capability  to handle 
+
+the events, to handle events in gui app
+
+ the respective 
+ gui components  will bipass
+event handling responsibility to a
+ particular component internally
+called as Listener.
+
+
+
+Listener will perform an action upon
+
+ receiving an event
+
+from graphical components by executing 
+
+some Listener methods.
+
+
+
+
+The process of delegating an event from 
+
+GUI component to
+
+a listener in order to perform an action 
+
+is called as Event  Delegation Model.
+
+Component   Event      Listener        ListenerMethod
+
+1.Button ActionEvent   ActionListner   public void actionPerformed(ActionEvent ae)
+
+
+2.MenuItem    "          "                  "
+
+3.TextField   "           "               "
+
+4.TextArea   "          "                "
+
+5.checkBox   ItemEvent   ItemListener           public void ItemStateChanged(ItemEvent ie)
+
+6. Radiobutton     "          "             "
+
+
+7. List       "          "               "
+
+
+
+8.choice     "            "                 "
+
+9.scrollbar AdjustmentEvent   AdjustmentListener
+
+
+
+
+10 window   WindowEvent       WindowListener
+
+11 keyboard KeyEvent            KeyListener
+
+12 Mouse    MouseEvent        MouseListener
+
+Steps to provide EventDelegation Model in GUI app:-
+---------------------    -------------------------
+step1:-
+
+prepare container as per the requirement 
+
+
+EX:-
+    class MyFrame extends Frame
+        {
+     MyFrame()
+      {
+      }
+       }
+step 2:-
+prepare the required gui components
+
+EX:-
+       Button b=new Button("ADD");
+
+
+
+step3:-
+
+add all the GUI componenets to container for 
+this we will use the following method.
+
+
+
+     public void add(Component c)
+
+		EX:
+      MyFrame mf=new MyFrame();
+            
+              mf.add(b);
+
+
+
+
+
+
+step 4:-
+Add the repective Listener to the
+ 
+   repective GUI components
+
+  for this we will use the following method.
+
+
+public void addxxxListener(xxxListener)
+
+
+where xxx may be Action,Item ,
+       
+           adjustment,window ...
+
+
+
+
+
+
+
+
+step 5:-
+implement the repectve Listener and override
+the Listener Method in implemented class
+
+ public class MyListener implements ActionListener
+   {
+
+  public void actionPerformed(ActionEvent ae)
+   {
+	//
+    }
+ }
+
+   
+
+Button:-
+
+
+
+Label:-
+
+If we have multiple no of buttons to get the 
+Label of of cliked button we will
+ use the following method.
+public string getActionCommand();
+

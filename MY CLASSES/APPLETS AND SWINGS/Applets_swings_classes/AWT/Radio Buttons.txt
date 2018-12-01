@@ -1,0 +1,13 @@
+Radio Buttons:
+
+A Radio Button represents round shaped button, such that only one can be selected from a panel. Radio button can be created using checkbox group class and checkbox classes.
+
+1. To create a radio button:
+	CheckboxGroup cbg = new CheckboxGroup();
+	Checkbox cb = new Checkbox("label",cbg,true);
+
+2. To know the selected checkbox:
+	Checkbox cb = cbg.getSelectedCheckbox();
+
+3. To know the selected Checkbox label:
+	String label = cbg.getSelectedCheckbox().getLabel();

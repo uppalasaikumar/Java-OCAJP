@@ -1,0 +1,33 @@
+/*•	It seems, LinkedList takes a lot of time to 
+create the node objects that wrap the elements.
+*/
+/*
+Linked list occupies more memory than arraylist
+because it has to allocate memory to store the 
+object as well as to store the reference of another object:
+*/
+import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.List;
+class Test1 
+{  
+	private static Object[] objects;  
+	static 
+	{  
+		objects = new Object[1000000];  
+		for (int i = 0; i < objects.length; i++)  
+			objects[i] = new Object();  
+	}  
+    static void test(List<Object> list) 
+	{  
+		long start = System.currentTimeMillis();  
+		for (Object o: objects)  
+			list.add(o);  
+		System.out.println(System.currentTimeMillis()-start);  
+	}  
+    public static void main(String[] args) 
+	{  
+		test(new ArrayList<Object>());  
+		test(new LinkedList<Object>());  
+	}  
+}  

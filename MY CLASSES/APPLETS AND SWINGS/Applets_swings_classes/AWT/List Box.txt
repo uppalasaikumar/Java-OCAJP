@@ -1,0 +1,16 @@
+List Box:
+
+A list box is similar to a choice box, but it allows the user to select multiple items.
+
+1. To create a List box:
+	List lt = new List(); // only one item can be selected
+	List lt = new List(3,true); //multiple items can be selected and 						3 items are initially visible
+
+2. To add items to the list box:
+	lt.add("text");
+
+3. To get the selected items:
+	String x[] = lt.getSelectedItems();
+
+4. To get the selected indexes:
+	int x[] = lt.getSelectedIndexes();

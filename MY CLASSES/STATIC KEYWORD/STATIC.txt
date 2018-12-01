@@ -1,0 +1,106 @@
+Static Members: There are 3 types of static members available in Java. They are:
+
+1)	static variables
+2)	static methods
+3)	static blocks
+
+static variables:
+================== 
+
+	A static variable is a variable defined with ‘static’ modifier. 
+
+		Ex: static int a;
+
+	These variables are global variables and also called class variables. Unlike instance variables where one set of variables are allotted per object there will be only one set of static variables shared by all the objects. Due to this any modification done to the value of a static variable can be seen from all objects
+	Static variables are directly loaded even before objects are created. When ever the class is accessed for any purpose these variables will be loaded into memory and get readily available. Due to this you can access the variables through class name.
+Ex: static int a;
+      static  double sal;
+
+Static Methods:
+=================
+
+	These are the methods declared with ‘static’ key word. Just like static variables static methods get loaded into memory as when class is accessed for any purpose. Since they are readily available in memory and are global they can be called with class name.
+	Static methods cannot access non-static members directly because static members are loaded before any object is created. But they can access non-static members through an object which is created in it.
+
+Static Block: 
+================
+
+	A block is a code enclosed in open and close braces. A static block is one with static key word. It executes only once when the class is accessed and is an ideal location for initialization of static variables.
+-------------------------------------------------
+The information about the 'class variables' is stored in the class area, and these class
+variables created when the class is loaded in the JVM. The class will be loaded in to the
+JVM will depends upon the JVM implementation. Irrespective of number of objects
+created only one copy of class variables are created.
+-------------------------------------------------
+
+
+==========================================================================================
+
+//program that demonstrates static members
+class emp
+{
+static int empno;
+String ename,job;
+static int count;
+void get(String ena,String jb)
+{
+ename=ena;
+job=jb;
+empno++;
+count++;
+}
+static void noofworkers()
+{
+System.out.println("No.of employees working in the company:"+count);
+}
+void show()
+{
+System.out.println("Employee number:"+empno+"\nEmployee name:"+ename+"\nJob:"+job);
+}
+static{
+empno=100;
+count=0;
+}
+}
+class staticdemo
+{
+public static void main(String[] args)
+{
+emp e1=new emp();
+e1.get("prasad","clerk");
+e1.show();
+emp e2=new emp();
+e2.get("siva","manager");
+e2.show();
+emp e3=new emp();
+e3.get("deepika","cashier");
+e3.show();
+emp e4=new emp();
+e4.get("raj","gaurd");
+e4.show();
+emp.noofworkers();//  static methods can be called directly by using class name
+	emp e5 = null; // object reference variable for emp class is created
+	e5.noofworkers();//we can call static members even using object references
+//initialized atleast with null.
+}
+}
+
+Output:
+========
+
+Employee number:101
+Employee name:xyz
+Job:clerk
+
+Employee number:102
+Employee name:abc
+Job:manager
+
+Employee number:103
+Employee name:mno
+Job:cashier
+
+Employee number:104
+Employee name:raj
+Job:guard
+

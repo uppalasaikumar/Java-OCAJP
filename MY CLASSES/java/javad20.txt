@@ -1,0 +1,57 @@
+INTERFACE is a specification of method prototypes.
+-> The class where all the methods of  interface implemented is called implementation class.
+->objects can be created to implementation calss.
+
+
+//an interface to connect to any database
+interface MyInter
+{
+void connect();
+}
+class OracleDB implements MyInter
+{
+public void connect()
+{
+System.out.println("Connecting to oracle database.............");
+}
+}
+class SybaseDB implements MyInter
+{
+public void connect()
+{
+System.out.println("Connecting to sybase database.............");
+}
+}
+class Database
+{
+public static void main(String args[]) throws Exception
+{
+Class c=Class.forName(args[0]);
+MyInter mi=(MyInter)c.newInstance();
+mi.connect();
+}
+}
+
+This is the eg for dynamic polymorphism.
+
+
+INTERFACE:
+------------------
+1. An interface is a specification of method prototypes.
+2. An interface contains 0(zero) or more abstract methods.
+3. All the methods of the interface are public and abstract by default.
+4. All the vars of the interface are public, static and final by default.
+5. We cannot create an object to an interface.
+6. But we can create a reference of interface type.
+7. All the methods of the interface should be implemented in its implementation classes.
+8. If any method is not implemented, then that implementation class should be declared as 'abstract'.
+9. Interface reference can be used to refer to objects of its implementation classes.
+10. Once an interface is written, any third party vendor can provide implementation classes for it.
+11. An interface cannot implement another interface.
+12. An interface can extend another interface.
+13. It is possible to write a class within an interface.
+14. A class can implement multiple interfaces.
+	Eg:  class MyClass implements Inter1,Inter2,..............
+
+
+	---- 

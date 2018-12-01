@@ -1,0 +1,52 @@
+class One
+{
+Two t;
+int x;
+One(Two t)
+{
+this.t=t;
+x=10;
+}
+void show()
+{
+System.out.println("x="+x);
+}
+}
+class Two
+{
+int y;
+Two()
+{
+y=22;
+}
+void show()
+{
+System.out.println("y="+y);
+}
+}
+class Relate
+{
+public static void main(String args[])
+{
+Two obj2=new Two();
+One obj1=new One(obj2);
+obj1.show();
+}
+}
+
+INNER CLASS:
+--------------------
+
+1.  Innerclass is a class within another class.
+2.  Innerclass is a safety mechanism.
+3.  Innerclass is hidden in its outerclass form other classes.
+4.  Only innerclasses can be declared as private(no other class).
+5.  An object to innerclass cannot created  in any other class.
+6.  An object to innerclass can be created only in its outer class.
+7.  Innerclass and outerclass objects are created in seperate      locations in memory.
+8.  All outer class members are available to inner class directly.
+9.  Outerclass members can be referenced as outer.this.member
+     Innerclass members can be referenced as this.member.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------

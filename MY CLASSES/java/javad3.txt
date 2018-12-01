@@ -1,0 +1,284 @@
+FLOAT DATA TYPES:
+------------------------------
+Represents for floating point number.
+Ex: 1.34,2.36
+
+D.T	Memory Size	Min and Max
+-----          ---------------------         -----------------------
+
+1.float	4 Bytes	              1.4e -45 to 3.4e 38
+
+2.double   8 Bytes	              4.9e -324 to 1.8 e 308
+
+Ex: float pi=3.142F;[jvm will take this no as double no and allot 8 number]
+
+
+
+CHARACTER DATA TYPE:
+-----------------------------------
+This data type represents a single character like 'A', 'b', *, ?, <, }, ", etc.
+
+D.T	 Memory Size 	  Min and Max
+-----	--------------------	---------------------
+
+1.char	2 Bytes		0 to 65535
+
+
+
+
+STRING DATA TYPES:
+-------------------------------
+They represent Strings like RAJ,SAM,RAHUL,CREDIT CARD NO:X234 	etc.
+
+Eg:
+String name="NIIT";---------------data type
+String str=new String("A String");------------------Its a class
+
+BOOLEAN DATA TYPES:
+-----------------------------------
+These data types acts upon TRUE or FALSE
+Eg:
+boolean response=true;
+
+
+
+		OPERATORS
+	              -------------------------
+Operator:
+-------------
+->An operator is a Symbol that performs an operation.
+->An operator acts upon the var's which are called 'operands'.
+->If an operator acts upon a single operand, it is called unary operator.
+->If an operator acts upon two operands, it is called binary operator.
+->If an operator acts upon three operands, it is called ternary operator.
+
+OPERATORS IN JAVA:
+--------------------------------
+1.  Arithmetic Operators:
++,-,*,/,%;
+
+2.  Unary Operators:
+-,++,--
+
+3.  Assignment Operators:
+=,+=,-=,*=,/=,%=
+
+4.  Relational Operators:
+<,<=,>,>=,==,!=
+
+5.  Logical Operators:
+&&, ||,!
+
+6.Boolean Operators:
+&,!,|
+
+7.Bitwise Operators:
+~(compliments) ,&,!,^,<<,>>
+  Bitwise Zero-fill right Shift:>>>
+
+8.Ternary Operator:[Conditional operator]
+?:
+
+9.Dot Operator or Member Operator(.):
+->To refer to a class in a package:java.util.Date,java.io.BufferedReader
+->To refer to a method in a class:Math.pow(),emp.getSal()
+->To refer to a variable in a class:Employee.name
+
+10.Instanceof Operator:
+To test whether an object belongs to a class.
+Eg:boolean x=emp instanceof Employee
+sy:boolean x=obj instanceof class;
+
+
+
+EXAMPLES:
+-----------------
+1.ARITHEMETIC OPERATORS:
+-----------------------------------------
+These operators are useful to perform basic(fundamental) arithemetic operations.[a=13,b=5]
+Operator	               Meaning                 Example                Result
+--------------            -------------------           --------------             -----------
+
++		Add	               a+b	        18
+
+-	                  Sub                          a-b                        8
+ 
+*                                   Mul                           a*b                       65
+
+/                                    Div                          a/b                        2.6
+
+%                                  Mod                        a%b                       3
+
+
+
+UNARY(-):
+--------------
+->This operator negates the value of a var.
+int x=5          // -5
+
+
+INCREMENT AND DECREMENT[++,--]:
+----------------------------------------------------
+
+
+In pre Incrementation,JVM will perform Incrementation first, any other operations next.
+
+In post Incrementation,any other operations are performed first,incrementation is done at the end.
+
+
+int x=1;			int x=1;
+                                                          
+S.o.p(x);			S.o.p(x);
+S.o.p(++x);		S.o.p(x++);
+S.o.p(x);			S.o.p(x);
+
+1 1 2			1 1 2
+
+
+
+a=7 
+++a*a++;
+a.49
+b.64
+c.56
+d.72
+e.None of above
+
+DECREMENT:
+---------------------------
+
+
+
+ 
+ASSIGNMENT OPERATOR[=]:
+-----------------------------------------
+This Operator stores a val into a variable.
+int x=5;
+Note:
+------
+We can't use more than one var at the left side of assignment.
+x+y=10;//Invalid
+
+NOTE:
+--------
+
+Expanded Notation			Compact Notation
+----------------------------			----------------------------
+sal=sal+500;			sal+=500;
+num=num-10.5;			num-=10.5;
+x=x*k;				x*=k;
+p=p/2;				p/=2;
+n=n%5;				n%=5;
+ 
+
+
+RELATIONAL OPERATORS:
+----------------------------------------
+These operators are useful to compare two quantities.
+Generally used in construction of simple conditions.
+
+
+LOGICAL OPERATORS:
+----------------------------------
+These are useful to construct compound conditions.
+Compound represent combination of 2 or more simple conditions.
+
+Eg:
+----
+if(a>b||b>c||c>a)...........................;
+
+
+BOOLEAN OPERATORS:
+-----------------------------------
+These operators act upon boolean variables and they return boolean type result.
+Eg:
+boolean a,b;a=true,b=false
+a&b-----false
+a|b-------true
+a&a-------true
+
+
+
+BITWISE OPERATORS:
+-------------------------------
+These act upon individual bits of numbers.
+Eg:
+convert 45 into binary
+
+i.  ~(complement):
+-------------------------
+This operator gives the complements form of a number.
+int x=10;
+~x=-11;
+
+
+ii.  &(and operator):
+-----------------------------
+
+This operator performs anding operation on the individual bits.
+
+
+iii.  |(or operator):
+------------------------
+
+This operator performs Oring operation on individual bits.
+
+
+iv.  ^(Xor operator):
+--------------------------
+
+This operator performs Excludive Oring operation on idividual bits.
+
+
+v.  <<(Bitwise left shift operator):
+---------------------------------------------
+
+This operator shifts the bits of a number towards left a specified no.of time.
+int x=10;
+x<<2=40;
+
+vi.>>(Bitwise right shift operator):
+-------------------------------------------------
+This operator shifts the bits of a number towards right a specified no.of time.
+int x=10;
+x>>2=2;
+
+
+vii.  >>>(Bitwise Zerofill right shift operator):
+--------------------------------------------------------------
+
+This operator shifts the bits towards right, but it always fills Zero(0) in the sign bit.
+NOTE:
+--------
+sign bit is 0 for '+ve' no.
+sign bit is 1 for '-ve' no.
+
+
+Eg:
+-----
+
+class Bits
+{
+public static void main(String args[])
+{
+byte x,y;
+x=10;
+y=11;
+System.out.println("~x="+(~x));
+System.out.println("x&y="+(x&y));
+System.out.println("x/y="+(x/y));
+System.out.println("x^y="+(x^y));
+System.out.println("x<<2="+(x<<2));
+System.out.println("x>>2="+(x>>2));
+}
+}
+
+
+
+
+
+
+
+
+
+

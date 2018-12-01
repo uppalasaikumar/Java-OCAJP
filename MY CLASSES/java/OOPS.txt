@@ -1,0 +1,41 @@
+The languages like C, PASCAL, FORTRAN, COBAL are called procedure oriented languages.  Because, in these prgms we create procedures and functions.
+
+The languages like C++ and JAVA are called object oriented programing languages.  Because, in these prgms we create classes and objects.
+
+IIQ: What is SRS?
+REP:  S/W Requirement Specification-----It is a report or document that contains client requirements and strategy(plans) to fulfil those requirements.
+
+IIQ: What is SDS?
+REP:  S/W Design Specification--------It is a report or document that contains I/O screens, pseudo codes(like algorithms not real code), DFD's(data flow diagrams) and DBD(data base description), etc.
+
+
+1.  In procedure oriented approach developers concentration will be on the problem and its solution.  We need another approach or methodology where the entire behaviour of the system is studied before developing the s/w.
+
+2.Procedure oriented approach is suitable for handling small projects.  We should go for another approach to handle bigger and complex projects without loosing control on it.
+
+3.  Programing in procedure oriented approach doesn't reflect human beings life and is quite unnatural.  We need another approach where programig reflects human beings life.
+
+            Because of the above reasons a new methodology or concept called OOPs(Object oriented programing system) has been developed by the scientist.
+
+                                                                                                             		FEATURES OF OOPS                                    
+	          -----------------------------------------
+
+1.  class/object:
+--------------------
+object:
+--------
+An object represents anything that exists physically in this world.
+->An object contains properties and can perform actions.
+->Properties are represented by variable.  Actions are represented by methods.
+->An object contains variables and methods.
+
+class:
+--------
+A class is a group name that specifies properties and actions of objects.
+->A class also contains a properties and actions but it doesn't exits physically.
+->A class is a model and plan for creating an objects.
+->An object is an instance of a class.
+
+	Eg:Red, blue, green are the objects of a color class.
+ 
+         A class can exists without any object.  But an object cannot exists without a class. For a single class we can create one or more objects.

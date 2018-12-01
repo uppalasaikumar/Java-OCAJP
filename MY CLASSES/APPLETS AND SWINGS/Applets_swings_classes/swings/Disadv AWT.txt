@@ -1,0 +1,28 @@
+Disadvantages of AWT:
+
+1. When we are creating a component that internally called Native method that written in C. The native method then internally creates equivalent peer component.
+
+2. The look and feel of AWT components are changing depending upon the O.S.
+
+3. AWT components are called Heavy Weight Components i.e AWT components are take more memory and more processing time.
+
+Because of the above 3 disadvantages of AWT the Java Soft people rewrite the AWT as JFC to create components without using any native methods internally.
+
+
+JFC (Java Foundation Classes) :
+
+Entire JFC develloped in java only. JFC overcomes the disadvantages of AWT.
+
+JFC is an extension of the original AWT. It contains libraries that are completly portable.
+
+1. JFC Components are light weight. They take less system resources.
+
+2. JFC components will have same look andd feel on all platforms.
+
+3. The programmer can change the look and feel as suited for a platform.
+
+4. JFC offers a rich set of components with lots of features.
+
+5. JFC does not replace AWT. JFC is an extension to AWT.
+
+Note: javax.swing package contains JFC.

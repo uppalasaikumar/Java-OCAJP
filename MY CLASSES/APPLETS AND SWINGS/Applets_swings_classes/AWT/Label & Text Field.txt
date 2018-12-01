@@ -1,0 +1,37 @@
+Label:
+
+A label is a constant text that is displayed with a Text Field.
+
+1. To create a label.
+	Label l = new Label("Text",alignmentconstant);
+
+Note: alignmentconstant:
+	Label.RIGHT, Label.LEFT, Label.CENTER
+
+
+TextField:
+
+TextField allows a user to enter a single line of text.
+
+1. To create a text field.
+	TextField tf = new TextField(25);
+	TextField tf = new TextField("Default Text",25);
+
+2. To get the text from a text field:
+	String s = tf.getText();
+
+3. To set the text into a text field:
+	tf.setText("text");
+
+4. To hide the text being typed into the TextField by a character:
+	tf.setEchochar('char');
+
+TextArea:
+
+TextArea is similar to a TextField, but it accepts more than one line of text from the user.
+
+1. To create a TextArea:
+	TextArea ta = new TextArea();
+	TextArea ta = new TextArea(rows,cols);
+
+Note: TextArea supports getText() and setText().

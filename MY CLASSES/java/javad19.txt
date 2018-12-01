@@ -1,0 +1,103 @@
+->A method with method body is called concerete method or complete method
+->A method without body is called abstract method
+
+//an abstract class example
+abstract class Car
+{
+//Every car will have a regno
+int regno;
+//to store regno
+Car(int r)
+{
+regno=r;
+}
+void filltank()
+{
+System.out.println("Take care key and fill into tank");
+}
+
+abstract void steering(int direction);
+
+
+abstract void braking(int force);
+
+
+}
+
+//this is a concreate sub class of car class
+class Maruti extends Car
+{
+Maruti(int regno)
+{
+super(regno);
+}
+void steering(int direction)
+{
+System.out.println("Maruti uses manual steering");
+System.out.println("Drive the car");
+}
+void braking(int force)
+{
+System.out.println("Maruti uses gas brakes");
+System.out.println("Stop the car");
+}
+}
+
+//Thsi is a concrete sub class of car class
+
+class Santro extends Car
+{
+Santro(int regno)
+{
+super(regno);
+}
+void steering(int direction)
+{
+System.out.println("Santro uses power steering");
+System.out.println("Start it");
+}
+void braking(int force)
+{
+System.out.println("Santro use hydraulic brakes");
+System.out.println("stop it");
+}
+}
+//using a car
+
+class UseCar
+{
+public static void main(String args[])
+{
+//create objects to maruti and santro
+Maruti m=new Maruti(2222);
+Santro s=new Santro(1221);
+//Create a reference of abstract class
+Car c;
+//to drive maruti
+c=m;
+c.filltank();
+c.steering(2);
+c.braking(200);
+}
+}
+
+
+ABSTRACT CLASS:
+--------------------------
+1. An abstract class is a class with Zero or more abstract methods.
+2. An abstract class contains instance vars and concrete methods on addition to abstract methods.
+3. We should declare both the abstract class and its abstract methods as 'abstract'.
+4. We cannot create an object to abstract class
+5. But we can create a reference variable of abstract class.
+6. Once an abstract class is written, all the abstract methods of that abstract class should be implemented in its subclasses.
+7. If any abstract method is not implemented then that subclass should also be declared as abstract.
+8. Abstract class reference can be used to refer to the objects of its sub classes.
+9. Abstract class reference cannot refer to the individual additional methods of the sub classes.
+10. Once an abstract class is written, it is the duty of the programer to create sub classes for it.
+11. A class cannot be declared both as abstract and final.
+	Eg:final abstract class MyClass//invalid.
+
+HOME WORK:
+-------------------
+1. Create an abstract class 'parent' with property details and an abstract method 'calculate()'. Now derive 'son' class from 'parent'
+ class and calculate the sons property by implementing calculate() method.

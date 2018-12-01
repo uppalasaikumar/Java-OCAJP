@@ -1,0 +1,191 @@
+//EQUALITY OF STRINGS
+class Test
+{
+public static void main(String args[])
+{
+String s1="Hello";
+String s2=new String("Hello");
+if(s1==s2)
+System.out.println("Both are same");
+else
+System.out.println("Not Same");
+}
+}
+
+Here JVM allots seperate memory for each of the var so the o/p is not same.
+
+IIQ:
+----
+What is hashcode number?
+Rep:
+-----
+Hash code number or reference number is a unique id number alloted to every object by the JVM.
+
+
+->  contents are compared but not reference(s1.equals(s2))
+-> == reference is compared but not contents.
+
+IIQ:
+------
+What is difference between == and  equals()
+Rep:
+----
+== operator compares the refernce of strings.It will not compare string object contents.It gives unreliable result.
+equals() compares contents of string objects.
+
+
+String constant pool:
+-------------------------
+It is a seperate block of memory where string objects are stored by the JVM.
+->JVM creates another reference to the same object i.e. same number is copied to the reference variable(s2).
+
+class Test1
+{
+public static void main(String args[])
+{
+String s1="Hello";
+String s2="Hello";
+if(s1==s2)
+System.out.println("Both are same");
+else 
+System.out.println("Not same");
+}
+}
+
+
+IIQ:
+-------
+What is the difference btw the following stmts
+	1.String s="Hello";
+	2.String s=new String("Hello");
+Rep:
+-----
+1. In the first stmt, JVM first of all searches in the string constant pool to know whether the same obj is available or not.  If the same obj is available in the pool then it will create a new reference to that obj.If the same obj is not available in the pool then only it will create a new obj and then stores it into the pool.
+
+2.  In the second stmt, new operator is used, so JVM always creates a new string obj outside the pool.
+
+
+
+
+
+CLASSIFICATION OF OBJECTS:
+--------------------------------------------
+1.  Mutable and 2.  Immutable objects.
+
+1.Mutable objs are the objects whose contents can be modified.
+
+2.Immutable objs are the objects whose contents cannot be changed.
+
+
+//Is string objs are Immutable?
+class Test2
+{
+public static void main(String args[])
+{
+String s1="One";
+String s2="Two";
+s1=s1+s2;
+System.out.println(s1);
+}
+}
+
+s1->One, When the value is assigned and when it stores the other value, the previous value is deallocated i.e. garbage collector collects the value i.e. same objects are not modified.
+
+
+CLASS APPLICATION TRANSMISSION:
+----------------------------------------------------
+From one application to another application such that the strings are immutable. StringBuffer objs are mutable.
+
+Creating StringBuffer:
+----------------------------
+StringBuffer sb=new StringBuffer("Hello");
+String Buffer sb=new StringBuffer(50);
+
+
+java.lang.StringBuffer:
+----------------------------
+
+1.StringBuffer append(x)
+------------------------------
+x may be int, float, double, char, string or stringBuffer.It will be appended to the calling stringBuffer.
+StringBuffer is a class in java.lang package.
+append(x):
+-------------
+Adding at the end of the data.
+
+2.StringBuffer insert(int offset,x)
+-----------------------------------------
+x may be int, float, double, char, string or stringBuffer.It will be inserted to the StringBuffer at offset.
+
+3.StringBuffer delete(int start,int end)
+----------------------------------------------
+Removes the chars from start to end.
+
+4.StringBuffer revers()
+-----------------------------
+Reverse the character sequences in the StringBuffer.
+
+5.String toString()
+------------------------
+Converts StringBuffer into a string.
+
+6.int length()
+---------------
+Returns the length of the StringBuffer
+
+7.int indexOf(String str)
+------------------------------
+Returns the first occurence of substring 'str' in the StringBuffer object.
+
+8.int lastIndexOf(String str)
+-----------------------------------
+Returns the last occurence of substring 'str' in the StringBuffer object.
+
+IIQ:
+-----
+What is the difference btw String and StringBuffer
+Rep:
+-------
+String class objs---------------Immutable
+StringBuffer class objs-------Mutable
+
+//Display fullname
+
+import java.io.*;
+class Full
+{
+public static void main(String args[]) throws IOException
+{
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("Enter name:");
+String sur=br.readLine();
+System.out.println("Enter midname:");
+String mid=br.readLine();
+System.out.println("Enter lastname:");
+String last=br.readLine();
+
+//create StringBuffer obj
+StringBuffer sb=new StringBuffer();
+
+//append sur,last to sb
+sb.append(sur);
+sb.append(last);
+System.out.println(sb);
+
+//insert mid after surname
+int n=sur.length();
+sb.insert(n,mid);
+System.out.println(sb);
+
+//display full name
+System.out.println("Full name="+sb);
+System.out.println("Inreverse="+sb.reverse());
+}
+}
+
+
+HOMEWORK:
+---------------
+1.  Sort a given group of strings in alphabetical order.
+2.  Find the position of a substring in a given main string
+3.  Test whether a given string is a palindrome or not.

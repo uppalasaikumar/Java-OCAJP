@@ -1,0 +1,29 @@
+Menu:
+
+A menu represents a group of options or items for the user to select. Menus are user friendly.
+
+Creating a Menu:
+
+1. Create a menu bar using JMenuBar class.
+
+2. Add this menu bar to the content pane.
+
+3. Create seperate menu using JMenu class.
+
+4. Add these menus to the menu bar.
+
+5. Create menu items using JMenuItem class, JCheckBoxMenuItem or JRadioButtonMenuItem classes.
+
+6. Add menu items to the menu.
+
+Creating a Sub-menu:
+
+Menu in another menu.
+
+1. Create a menu using JMenu class.
+
+2. Add this menu to another menu.
+
+3. Create menu items using JMenuItem class, JCheckBoxMenuItem or JRadioButtonMenuItem classes.
+
+4. Add these menu items to the submenu.

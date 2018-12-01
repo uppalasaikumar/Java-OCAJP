@@ -1,0 +1,30 @@
+Map interface:
+--------------------
+•	The Map interface maps unique keys to values. A key is an object that you use to retrieve a value at a later date.
+•	Given a key and a value, you can store the value in a Map object. After the value is stored, you can retrieve it by using its key.
+•	Several methods throw a NoSuchElementException when no items exist in the invoking map.
+•	A ClassCastException is thrown when an object is incompatible with the elements in a map.
+•	A NullPointerException is thrown if an attempt is made to use a null object and null is not allowed in the map.
+•	An UnsupportedOperationException is thrown when an attempt is made to change an unmodifiable map.
+•	The interface methods can be broken down into three sets of operations: altering, querying and providing alternative views.
+•	The alteration operation allows you to add and remove key-value pairs from the map. 
+•	Both the key and value can be null. However you should not add a Map to itself as a key or value.
+
+	Object put(Object key, Object value) 
+	Object remove(Object key) 
+	void putAll(Map t) 
+	void clear() 
+
+•	The query operations allow you to check on the contents of the map
+
+	Object get(Object key) 
+	boolean containsKey(Object key) 
+	boolean containsValue(Object value) 
+	int size()
+	boolean isEmpty() 
+
+•	The set methods allow you to work with the group of keys or values as a collection
+
+	Set keySet() 
+	Collection values() 
+	Set entrySet()

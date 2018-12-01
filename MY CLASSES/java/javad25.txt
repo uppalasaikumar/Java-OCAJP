@@ -1,0 +1,199 @@
+class Ex
+{
+public static void main(String args[])
+{
+try
+{
+System.out.println("Open files");
+int n=args.length;
+System.out.println("n="+n);
+int a=45/n;
+System.out.println("a="+a);
+int b[]={45,56,78};
+b[50]=100;
+}
+catch(ArrayIndexOutOfBoundsException aie)
+{
+aie.printStackTrace();
+System.out.println("plz see array index is within the range");
+}
+catch(ArithmeticException ae)
+{
+System.out.println(ae);
+System.out.println("plz type values while running this prgm");
+}
+finally
+{
+System.out.println("Close files");
+}
+}
+}
+
+->Multiple Exceptions can be handled using multiple catch blocks.
+->Catch block is executed only when there is an  exception in block.
+->A single try block can be followed by several catch blocks.
+->A catch block cannot exits without a try block.
+->A try block cannot exits without a catch block.
+
+//Not handling exception
+
+import java.io.*;
+class Ex1
+{
+void accept()
+{
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("Enter name:");
+String name=br.readLine();
+System.out.println("Hello"+name);
+}
+}
+class Demo
+{
+public static void main(String args[])
+{
+Ex1 e=new Ex1();
+e.accept();
+}
+}
+
+
+
+*void accept() throws IOException
+
+*public static void main(String args[]) throws IOException
+
+
+
+throws:
+-----------
+->throws stmt is useful to throw an exception out of a method without handling it.
+
+throw:
+--------
+throw stmt is useful to create an exception object, throw it out of a try block and also handle it.
+
+
+//throw
+
+
+Uses of throw:
+-------------------
+->There are 2 Uses.
+1.  throw is used in a s/w testing to test whether a prgm is handling all the exceptions as claimed by the programer.
+
+2.  throw is used to throw user defined exceptions.
+  
+	There are 2 types:
+	1. Built in Exceptions
+	2. User defined Exceptions
+
+1.Built in Exceptions:
+-----------------------------
+The exceptions already available in java.
+
+Eg:
+----
+IOException--When there is a runtime error when you are giving input or output.
+->ArithmeticException--at the time of doing some addition calculations.
+->ArrayIndexOutOfBoundsException
+->StringIndexOutOfBoundExceptions
+->ClassNotFoundException
+->NoSuchMethodException
+->FileNotFoundException
+->InterruptedException
+->NumberFormatException
+->RuntimeException
+->NullPointerException
+
+2.User defined Exceptions:
+------------------------------------
+These are the exceptions created by user of the languange[prgmer].
+
+->Creating u.d.exs:
+--------------------------
+Step 1:
+--------
+Create User exception class as a sub class to exception class.
+eg:
+-----
+class MyException extends Exception
+
+step 2:
+---------
+Create a default constructor with empty body in user exception class.
+eg:
+-----
+MyException()
+{
+//empty body
+}
+
+step 3:
+---------
+Create a string parameterised constructor and from their call super class constructor.
+eg:
+---
+MyException(String str)
+{
+super(str);
+}
+
+step 4:
+---------
+To raise the exception create an object to user exception class and throw it using throw stmt.
+eg:
+----
+MyException me=new MyException();
+throw me;
+
+
+//creating Userdefined Exceptions
+
+class MyException extends Exception
+{
+private static int accno[]={1001,1002,1003,1004,1005};
+private static String name[]={"Raj","Sam","Kumar","Vinny","Poo"};
+private static double bal[]={7890.00,9000.50,12000.00,19999.99,1200.75};
+MyException()
+{
+}
+MyException(String str)
+{
+super(str); // super.Exception(str);
+}
+public static void main(String args[])
+{
+try
+{
+System.out.println("AccNo"+"\t"+"Name"+"\t"+"Balance");
+for(int i=0;i<5;i++)
+{
+System.out.println(accno[i]+"\t"+name[i]+"\t"+bal[i]);
+//if balance<2000 then rise Exception
+if(bal[i]<2000.00)
+{
+MyException me=new MyException("your balance is less...");
+ throw me;
+}
+}
+}
+catch(MyException me)
+{
+me.printStackTrace();
+}
+}
+}
+
+Why we are rising an Exception?
+None of Exception is available which is suitable to our situation that's why we are rising one more own exception.
+
+****There may be several exception but it is going to handle only one at a time by JVM.
+
+
+HOME WORK:
+------------------------
+-> Create a prgm that accepts 2 no's as i/p from cmdline. Your prgm should throw RuntimeException, if exactly two no's are not given.
+
+-> Create a student class with some students names and their marks in maths. Rise your own exception like 'Unreasonable marks' if any student gets more than 100 maths.
+

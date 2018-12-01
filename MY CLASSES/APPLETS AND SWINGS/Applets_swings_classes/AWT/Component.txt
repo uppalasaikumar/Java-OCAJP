@@ -1,0 +1,65 @@
+Frame:
+=======
+	A frame is a top level window that does not contain in another window. It is container to place the components.
+
+1. To create a Frame, extend your class to Frame class. Then create an object to your class.
+
+2. To set a title for the frame, use
+	setTitle(str)
+
+3. To set the size of the frame, use
+	setSize(x,y)
+
+4. To display the frame, use 
+	setVisible(true)
+
+Refreshing the contents of a frame:
+
+5. The component class got a mothod:
+	paint() that paints(refreshed) the area in a frame.
+
+Displaying Text in a frame:
+
+6. Use Graphics class method
+	drawString()
+
+Displaying images in a frame:
+
+7. Use Graphics class method
+	drawImage()
+
+About components (Component class methods):
+
+8. Any component can be added to a frame using add().
+
+9. A component can be removed from a frame using remove().
+
+10. All components can be removed from frame with removeAll().
+
+11. Any component can be displayed using 
+	setVisible(true).
+
+12. Any component can be disappeared using 
+	setVisible(false).
+
+13. A component'c colors can be set using:
+	setBackgroud(), setForeground()
+
+14. Font for the displayed text on the component can be set with
+	setFont()
+
+15. A component can be placed in a particular location in the frame with 
+	setBounds()
+
+Creating Font:
+
+Font f = new Font("name",style,size);
+setFont(f); // components class method also in Graphics class.
+
+Creating Color:
+
+Ex1: setColor(Color.yellow);
+Ex2: Color c = new Color(255,0,0); //r,g,b values
+     setColor(c);
+
+Note: Maximum size of screen in Pixels: 	800X600

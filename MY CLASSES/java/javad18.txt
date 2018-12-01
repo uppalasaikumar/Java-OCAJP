@@ -1,0 +1,152 @@
+TYPE CASTING:
+---------------------
+
+->Converting one datatype into another datatype is called type casting or casting.
+Data type:
+------------
+A data type represents the type of data stored into a variable or memory.
+There are 2 types of Data types:
+1.Fundamental datatypes or pimitive datatypes:
+-----------------------------------------------------------
+These data types store a single value.  Methods are not available to handle them.
+For eg:
+-------
+byte, short, char, int, long, float, double, boolean.
+
+2.Advanced datatypes or Referenced datatypes:
+----------------------------------------------------------
+These data types represents several values.  Methods are also available to handle them.
+For eg:
+---------
+any array, any class(ex:String, Emp,.......)
+
+
+1.  Using casting we can convert a primitive data type into another primitive type.
+2.  Using casting we can convert one advanced data type into another advanced type.
+3. We cannot convert a primitive data type into an advanced type or vice versa using casting.  For this purpose we should use Wrapper class methods.
+
+
+CASTING FUNDAMENTAL DATA TYPES:
+--------------------------------------------------------
+
+(a)Widening:
+----------------
+Casting a lower datatype into a higher datatype is called widening.
+
+For eg:
+--------
+char ch='A';
+//int n=ch;
+int n=(int)ch;
+[l----h]
+
+->Widening is safe
+
+int num=12;
+float x=num;
+float x=(float)num;
+
+If we dont write float it is also correct as java compiler will provide default casting operator internally.
+
+->Widening is also called Implicit casting.
+
+(b)Narrowing:
+------------------
+Converting a higher datatype into a lower data type is called Narrowing.
+->In this we may loose digits or accuracy.
+
+Eg:
+int x=66;
+char c=x;(Invalid)
+char c=(char)x;
+
+Eg:
+double d=12.9876;
+int n=(int)d;
+
+-> Narrowing is Unsafe.
+-> Narrowing is also called Explicit casting.
+
+
+
+CASTING ADVANCED DATATYPES:
+------------------------------------------------
+Casting can be used to convert one class type into another class type when those classes have relationship by the way of inheritance.
+
+->class One
+{
+void show1()
+{
+System.out.println("Super");
+}
+}
+class Two extends One
+{
+void show2()
+{
+System.out.println("Sub");
+}
+}
+class Cast
+{
+public static void main(String args[])
+{
+One o=new One();
+o.show1();
+}
+}
+
+
+
+2nd One:
+------------
+//sub class reference to refer to sub class obj
+
+Two t;
+t=new Two();
+t.show1();
+t.show2();
+}
+}
+
+
+3rd comb:
+---------------
+//super class reference to refer to sub class obj
+
+One o;
+o=new Two();
+o.show1();
+o.show2();//Its error
+
+class sub class type into super class type is called widening. And is called Up casting.
+
+->In widening we can call super calss methods.
+->In widening we cannot call sub class methods.
+->In widening we cannot call sub class methods unless they override super class methods.
+
+//Sub class reference to refer to super calss obj
+
+Two t;
+t=(Two) new One();
+t.show1();
+t.show2();
+
+Casting superclass type into sub class type is called Narrowing or down casting.
+
+->Narrowing using super class object cannot access methods of both the super class and sub classes.
+
+//Two t;
+t=(Two) new One();
+t.show1();
+t.show2();
+
+//One o;
+o=new Two();
+Two t=o;
+Two  t=(Two)o;
+t.show1();
+t.show2();
+
+
+Narrowing using sub class objects can access all the methods of both the super class and also sub class

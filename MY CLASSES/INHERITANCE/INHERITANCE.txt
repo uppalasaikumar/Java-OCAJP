@@ -1,0 +1,99 @@
+Inheritance:
+==============
+
+	It is the concept which is used for reusability of code.
+Inheritance is the concept through which we can inherit the properties of
+super class or base class to its sub classes.
+
+@ The class from  which properties can be derived is called Base class
+ or parent class.
+
+@ The class in which the properties of the base class are derived is 
+called as derived class.
+
+@To derive a class in java the keyword 'extends' is used.
+
+@ The following kinds are there in java:
+
+	1) Simple Inheritance.
+	2) Multi level Inheritance.
+
+1) Simple Inheritance:
+======================
+
+	When a class is derived from only one base class then the
+inheritance is said to be simple inheritance or one - level inheritance.
+
+2) Multi level Inheritance:
+=========================
+
+	When a sub class derived from a derived
+class then the mechanism is called as multi level inheritance. 
+Multi level inheritance can go up to any number of level.
+
+OVVERIDING:
+===========
+
+	Some times the super class members and sub class members may have same names and
+behaviours.In that case only sub class members are accessible. The concept is so called as 
+ovverriding.
+
+## In method ovveriding , method return types should also be same.
+
+## JVM decides which method is called depending on the data type(class) of the object
+used to call the method.
+
+## Method ovveriding is done when the programmer wants to provide a different implementation(body) for the same feature.
+
+## Method ovveriding is code replacement. The sub class method overrides (replaces) the super class method.
+
+To overcome this problem a keyword by named 'super' can be used...
+
+@@ super can be used to refer to super class methods.
+
+@@ super can be used to refer to super class constructor.
+
+@@ super can be used to refer to super class variables.
+
+
+note::
+=======
+
+@@ When sub class object is created, at first the super class default (or) no-args constructor is called and then only the sub class constructor is called.
+@@ If there is no availability of no-args constructor in super class then programmer need to decide the argumented constructor calling if any.
+@@ If argumented constructor is available then programmer can refer it using super keyword in any of 
+the sub class constructors using which we can create an object.
+
+
+
+
+
+class A
+{
+	sum(int a,int b)
+	{
+		return (a+b);
+	}
+	sub()
+	{}
+}
+class B extends A
+{
+	sum(int a,int b)
+	{
+		return (a+a);
+	}
+	mul()
+	{}
+	method_name(int a,int b)
+	{
+		super.sum(a,b);
+	}
+}
+class C extends B
+{
+	division()
+	{
+		//definition
+	}
+}

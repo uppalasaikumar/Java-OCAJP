@@ -1,0 +1,130 @@
+FACTORY METHODS:
+----------------------------
+There is a method getNumberInstance()----It is a static method in a NumberFormat class.
+->This method returns NumberFormat class obj. Now that method is called Factory method.
+->A factory method is a method that returns on object of the class to which it belongs.
+Eg:
+---
+NumberFormat.getNumberInstance();
+
+
+WAYS OF CREATING OBJECTS IN JAVA:
+--------------------------------------------------------
+1.  Using new operator:
+-----------------------------
+Employee obj=new Employee();
+
+2.  Using Factory methods:
+----------------------------------
+NumberFormat obj=NumberFormat.getNumberInstance();
+
+3. Using newInstance() method:
+----------------------------------------
+If u r creating a class emp then pass emp as a string to method--It is a factory method.
+
+//class.forName("Employee");
+class c=class.forName("Employee");
+//c.newInstance();
+Employee obj=c.newInstance();
+
+4. Using cloning:
+---------------------
+cloning:
+-------
+Creating exact copy of an existing object.
+
+
+//area of a circle
+
+import java.text.NumberFormat;
+class Circle
+{
+public static void main(String args[])
+{
+final double PI=3.142856;
+double r=15.5;
+double area=PI*r*r;
+System.out.println("Area of circle="+area);
+
+//create NumberFormat class object
+NumberFormat obj=NumberFormat.getNumberInstance();
+//store format information into obj
+obj.setMaximumFractionDigits(2);
+obj.setMinimumIntegerDigits(7);
+//apply format information to area
+String str=obj.format(area);
+//display formatted area
+System.out.println("Formatted area="+str);
+}
+}
+
+
+NumberFormat and DateFormat are the 2 important classes which v can find in text package.
+
+//to find sum of two matrices
+import java.io.*;
+class Arr
+{
+int r,c;
+int arr[][];
+Arr(int r,int c)
+{
+this.r=r;
+this.c=c;
+arr=new int[r][c];
+}
+int[][] getMatrix() throws IOException
+{
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+for(int i=0;i<r;i++)
+for(int j=0;j<c;j++)
+{
+System.out.println("Enter element:");
+arr[i][j]=Integer.parseInt(br.readLine());
+}
+return arr;
+}
+int[][] findSum(int a[][],int b[][])
+{
+int temp[][]=new int[r][c];
+for(int i=0;i<r;i++)
+for(int j=0;j<c;j++)
+temp[i][j]=a[i][j]+b[i][j];
+return temp;
+}
+void putMatrix(int res[][])
+{
+for(int i=0;i<r;i++)
+{
+for(int j=0;j<c;j++)
+{
+System.out.println(res[i][j]+"\t");
+}
+System.out.println();
+}
+}
+}
+class MatrixSum
+{
+public static void main(String args[]) throws IOException
+{
+//vars
+Arr obj1=new Arr(3,3);
+Arr obj2=new Arr(3,3);
+int x[][],y[][],z[][];
+System.out.println("\nEnter elements of matrix1:");
+x=obj1.getMatrix();
+System.out.println("\nEnter elements of matrix2:");
+y=obj2.getMatrix();
+z=obj1.findSum(x,y);
+System.out.println("\nThe sum Matrix is:");
+obj2.putMatrix(z);//obj1.putMatrix(z);
+}
+} 
+
+
+HOME WORK:
+-----------------
+17.  Write a method to swap two given values.
+18.  Multiply two matrices and display the pro matrix using methods
+19.  Write a method to accept a year number, test and display whether it is leap or not.

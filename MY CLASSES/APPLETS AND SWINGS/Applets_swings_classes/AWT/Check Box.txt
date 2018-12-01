@@ -1,0 +1,18 @@
+Check Box:
+
+A check box is a square shaped box which provides a set of options to the user.
+
+1. To create a check box.
+	Checkbox cb = new Checkbox("label");
+
+2. To create a checked check box.
+	Checkbox cb = new Checkbox("label",null,true);
+
+3. To get the state of the check box.
+	boolean b = cb.getState();
+
+4. To set the state of the check box.
+	cb.setState(true);
+
+5. To get the label of the check box.
+	String str = cb.getLabel();

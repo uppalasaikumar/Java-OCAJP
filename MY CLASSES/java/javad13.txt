@@ -1,0 +1,133 @@
+METHODS IN JAVA:
+--------------------------
+1.  Static methods
+2.  Instance methods
+     (a). Accessor methods
+     (b). Mutator methods
+3.  Factory methods
+
+
+
+2.  Instance methods:
+--------------------------
+->Instance methods are the methods which act upon the instance vars.
+->Instance methods are called using objectname.methodname
+->Instance methods are of two types:
+     (a). Accessor methods
+     (b). Mutator methods
+
+
+1. Accessor methods
+-------------------------- 
+ Accessor methods are the methods which access or reads the instance vars. They do not modify the instance vars.
+
+2.  Mutator methods
+--------------------------
+Mutator methods are the methods not only read instance vars but also modify them.
+
+//Accessor and Mutator methods
+
+class Person
+{
+//instance vars
+String name;
+int age;
+char gen;
+//parameterized constructor
+Person(String name, int age,char gen)
+{
+this.name=name;
+this.age=age;
+this.gen=gen;
+}
+//read and display the vars
+void display()
+{
+System.out.println("Name="+name);
+System.out.println("Age="+age);
+System.out.println("gen="+gen);
+}
+}
+class Demo
+{
+public static void main(String args[])
+{
+Person p1=new Person("Raj",20,'M');
+p1.display();
+}
+}
+
+
+
+//Mutator method
+class Person
+{
+//instance vars
+String name;
+int age;
+char gen;
+//parameterized constructor
+Person(String name, int age,char gen)
+{
+this.name=name;
+this.age=age;
+this.gen=gen;
+}
+//read and display the vars
+void display()
+{
+System.out.println("Name="+name);
+System.out.println("Age="+age);
+System.out.println("gen="+gen);
+}
+//mutator method
+Person modify(Person obj)
+{
+obj.name="Priya";
+obj.age--;
+obj.gen='F';
+return obj;
+}
+}
+class Demo
+{
+public static void main(String args[])
+{
+Person p1=new Person("Sam",20,'M');
+p1.display();
+Person p2=p1.modify(p1);
+p2.display();
+}
+}
+ 
+
+
+
+this:
+-------
+->this is a keyword that refers to the present or current class.  It means this can refers to all the members of parent class.  It means this refers to present class instance vars, present class methods and present class constructors.
+
+class Sample
+{
+int n;
+Sample()
+{
+this(100);
+this.display();
+}
+Sample(int n)
+{
+this.n=n;
+}
+void display()
+{
+System.out.println("n="+n);
+}
+}
+class ThisDemo
+{
+public static void main(String args[])
+{
+Sample s=new Sample();
+}
+}

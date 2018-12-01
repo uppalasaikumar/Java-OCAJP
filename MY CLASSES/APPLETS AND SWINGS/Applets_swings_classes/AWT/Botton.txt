@@ -1,0 +1,16 @@
+Button Class:
+=============
+Button Class is useful to create push buttons. A push button triggers a series of events.
+
+1. To create a push button with a label:
+	Button b = new Button("LABEL");
+
+2. To get the label of the button:
+	String l = b.getLabel();
+
+3. To set the label of the button:
+	b.setLabel("LABEL");
+
+4. To get the label of the button clicked:
+	String s = ae.getActionCommand();
+	//ae is an object of 	ActionEvent

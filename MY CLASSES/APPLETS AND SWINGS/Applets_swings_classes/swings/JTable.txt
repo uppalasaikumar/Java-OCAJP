@@ -1,0 +1,16 @@
+JTable:
+
+JTable represents data in the form of a table. The table can have rows of data, and column headings.
+
+1. To create a JTable:
+	JTable tab = new JTable(data,cols);
+   Here, data and cols can be arrays or can    be vecotor of vectors.
+
+2. To create a row using a vector:
+	Vector row = new Vector();
+    row.add(obj); //here obj represents a col
+
+3. To create a table headings, we use:
+	JTableHeader head = 	tab.getTableHeader();
+
+Note: JTableHeader class is defined in javax.swing.table package.

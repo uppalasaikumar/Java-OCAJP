@@ -1,0 +1,202 @@
+NETWORK:
+----------------
+Interconnection of computers is called a Network.
+
+HANDSHAKING MECHANISM:
+-----------------------------------------
+Two computers establishing a connection,communicating with each other and finally disconnecting from each other is called Hand shaking Mechanism.
+
+IIQ:
+-----
+**What is the difference between .exe file and a .class file?
+Rep:
+------
+**.Exe file contains machine language instructions understandable by micro processor.
+.class file contains byte code instructions understandable by the JVM.
+ 
+.Exe file is System dependent.
+.Class file is System Independent.
+    **JVM is system dependent.
+
+
+
+
+MAJOR SECURITY PROBLEMS FOR DATA ON INTERNET:
+----------------------------------------------------------------------------------
+
+
+1.EAVESDROPPING:
+-----------------------------
+Reading others data illegally is called Eavesdropping.This is the major problem.
+
+2.Tampering:
+------------------
+Not only reading others data but also modifying is called Tampering.
+
+3.Impersonation:
+-----------------------
+A person acting as another person on internet is called Impersonation.
+
+4.Virus:
+------------
+Virus is a harmful program that can damage data,s/w, and h/w of a computer system.
+
+
+1.EAVESDROPPING:
+-----------------------------
+Encryption/decryption.
+
+
+2.Tampering:
+------------------
+Encryption/decryption.
+
+3.Impersonation:
+-----------------------
+digital signature.
+
+4.Virus:
+------------
+.class files are like text files they cannot cary virus along with that.
+    
+          Security Manager is a feature of JVM.
+
+
+****
+Why and How Java suitable for Internet?
+1.Java is system Independent(P.I)
+2.We are able to provide security on Internet.
+
+
+
+->1990-Sun Microsystem
+
+->1993-Oak
+
+->1995-Sun World Conference
+
+
+
+FEATURES OF JAVA:
+-------------------------------
+
+
+1.SIMPLE:-
+---------------
+Java is a simple prgming lang.Learning and practising java is easy bcoz of its resemblence with c and c++.Also  complex topics of c and c++ are eliminated in Java.
+
+2.OBJECT-ORIENTED:-
+-------------------------------
+Unlike c++,Java is a purely object oriented prgming lang.Java prgms use objects and classes.
+
+3.DISTRIBUTED:-
+---------------------
+ Information is distributed on various computers on a network. Using Java, we can write prgms which capture information and distribute it to clients.
+
+4.ROBUST:-
+----------------
+Java prgm will not crash easily bcoz of its exception handling 
+and its memory mgmt features.
+
+5.SECURE:-
+-----------------
+Java enables the construction of virus free and tamper free system.
+
+6.ARCHITECTURE NEUTRAL:-
+----------------------------------------
+Java's byte code is not machine dependent.
+It can be run on any machine with any processor and with any O/S.
+
+7.PORTABLE:-
+---------------------
+Java prgms give same results on all machines.
+
+8.INTERPRETED:-
+---------------------------
+Java prgms are compiled to generate the byte code. This byte code can be downloaded and interpreted by the interpreter in JVM.
+
+9.HIGH PERFORMANCE:-
+-----------------------------------
+Along with interpreter,there is JIT compiler in JVM which enhances the speed of execution.
+    
+
+
+
+		JVM ARCHITECTURE
+                              --------------------------------------
+
+
+
+10.MULTITHREADED:-
+------------------------------
+We can create several processes in Java, called 'threads'.  This is an essential feature to design server side prgms.
+
+11.DYNAMIC:-
+--------------------
+We can develop prgms in java which dynamically interact with the user on Internet(ex:applets)
+
+
+                                  COMMENTS
+                                 -------------------
+
+Comments represent description about the features of the prgm.
+->Comments increase readability of a prgm.
+->Writing comments is not compulsory.  It signifies a good prgming way.
+->Comments are non-executable stmst in Java.
+
+There are 3 types:
+------------------------
+1.single line comments - //
+2.Multi line comments - /*---------------------
+		       ---------------------*/
+3.Java documentation comments - /**------------------------
+			        ---------------------------*/
+[Useful to create API doc.]
+
+
+
+
+ PROGRAMS:
+-------------------
+
+
+//First prgm in java
+import java.lang.*;
+class First
+{
+public static void main(String args[])
+{
+System.out.println("Welcome to Java");
+}
+}
+
+
+Second Java prgm:
+---------------------------
+//To find the sum of two no's:
+class Sum
+{
+public static void main(String args[])
+{
+//vars
+int x,y,z;
+//store
+x=10;
+y=25;
+//find sum
+z=x+y;
+//display the result
+System.out.println("Sum of 2 Nos="+z);
+}
+}
+
+
+backslash code or escape sequence	meaning
+----------------------------------------------------	---------------
+
+/n       				new line
+/t				tab
+/b				backspace
+/r				enter
+				
+				
