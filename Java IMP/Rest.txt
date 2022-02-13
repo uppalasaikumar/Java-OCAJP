@@ -1,0 +1,9 @@
+Rest architecture style
+Statelessness vs stateful
+state transfer
+Http Methods
+Http status codes
+Principles
+design principles of Rest end point
+Idempotency
+compression : accept-encoding and content-encoding
